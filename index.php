@@ -14,6 +14,18 @@ try {
             /*********************************************************************************
             ************************************ FrontController *****************************
             *********************************************************************************/
+
+            // Mentions légales
+            case 'legalsMentions':
+                $frontController = new FrontController();
+                $frontController->legalsMentions();
+            break;
+
+            // Politique de confidentialité
+            case 'privacyPolicy':
+                $frontController = new FrontController();
+                $frontController->privacyPolicy();
+            break;
             
             
         }
