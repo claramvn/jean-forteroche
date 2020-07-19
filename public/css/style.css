@@ -1,0 +1,221 @@
+/********************* GENERALS SETTINGS *********************/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin-left: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/********************* HEADER TEMPLATE *********************/
+
+/* Header */
+#header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#header a {
+    font-weight: bold;
+}
+
+#header div {
+    display: flex;
+    text-align: left;
+}
+
+#header ul {
+    font-size: 15.5px;
+    display: flex;
+}
+
+#div_pages,
+#div_pages ul {
+    width: 160%;
+}
+
+#div_pages li {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+#div_pages li:hover {
+    border-bottom: 4px solid black;
+}
+
+#tag {
+    margin-top: -33%;
+}
+
+#div_user {
+    width: 50%;
+}
+
+.second_nav_hover:hover li {
+    visibility: visible;
+}
+
+.second_ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.second_ul li {
+    visibility: hidden;
+    background: white;
+    width: 120%;
+    padding: 4% !important;
+}
+
+.second_ul li:hover {
+    border-bottom: 2px solid black;
+}
+
+.first_li {
+    margin-top: 16% !important;
+}
+
+/********************* HOME BANNER *********************/
+
+#banner {
+    margin-top: -1%;
+}
+
+#banner img {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+}
+
+#text_banner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    width: 80%;
+    margin-top: 260px;
+    margin-left: 10%;
+    background: rgba(255, 255, 255, 0.4);
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#text_banner h1 {
+    font-size: 50px;
+    padding-top: 3%;
+}
+
+#text_banner h2 {
+    margin-top: 2%;
+    font-size: 25px;
+}
+
+#text_banner p {
+
+    font-size: 40px;
+}
+
+/********************* HOME INTRO *********************/
+
+#intro {
+    width: 80%;
+    height: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+#intro h1 {
+    color: #EB5159;
+    font-size: 45px;
+    text-align: center;
+}
+
+.separation {
+    width: 1px;
+    height: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#block_square {
+    margin: auto;
+    width: 50%;
+    position: relative;
+}
+
+#square {
+    width: 50%;
+    height: 480px;
+    margin-left: 5%;
+    background: #EDF1F4;
+}
+
+#square2 {
+    top: 12%;
+    left: 40%;
+    width: 60%;
+    padding: 1%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#square2 p {
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/********************* FOOTER *********************/
+
+#arrow {
+    text-align: right;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-right: 1%;
+}
+
+#arrow a {
+    color: black;
+    background: #FABA17;
+    padding: 1%;
+}
+
+footer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background: #394047;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+    color: white;
+}
