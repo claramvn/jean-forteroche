@@ -15,6 +15,12 @@ try {
             ************************************ FrontController *****************************
             *********************************************************************************/
 
+            // L'auteur
+            case 'author':
+                $frontController = new FrontController();
+                $frontController->author();
+            break;
+
             // Mentions légales
             case 'legalsMentions':
                 $frontController = new FrontController();

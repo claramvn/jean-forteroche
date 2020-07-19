@@ -216,7 +216,30 @@ ul {
     font-family: 'Montserrat', sans-serif !important;
 }
 
-/*********************  LEGALS MENTIONS & PRIVACY POLICY *********************/
+/********************* PAGE AUTHOR *********************/
+
+#block_author {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+#img_author {
+    padding: 2%;
+    width: 300px;
+}
+
+#img_author img {
+    width: 250px;
+}
+
+#text_author {
+    padding: 2%;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/********************* LEGALS MENTIONS & PRIVACY POLICY *********************/
 
 #mentions,
 #privacyPolicy {

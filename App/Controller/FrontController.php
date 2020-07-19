@@ -14,6 +14,12 @@ class FrontController
         require('view/home.php');
     }
 
+    // L'auteur
+    public function author()
+    {
+        require('view/author.php');
+    }
+
     // Mentions légales
     public function legalsMentions()
     {
