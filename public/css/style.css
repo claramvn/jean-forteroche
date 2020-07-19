@@ -162,11 +162,39 @@ ul {
     position: absolute;
 }
 
+/********************* HOME RECENT ARTICLE *********************/
+
+#recent_tag {
+    width: 12%;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    margin-top: 5%;
+    border-radius: 2px;
+    padding: 8px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    background: #EB5159;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 20px;
+    border-left-width: 20px;
+    border-top: 20px solid #EB5159;
+    margin-left: 5%;
+    margin-top: -10px;
+    margin-bottom: 2%;
+}
+
 /********************* HOME INTRO *********************/
 
 #intro {
     width: 80%;
-    height: 1200px;
+    height: 1000px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
@@ -237,6 +265,60 @@ ul {
     padding: 2%;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif !important;
+}
+
+/********************* DESIGN FOR RECENT ARTICLE & LIST POST  *********************/
+
+#block_recent_post,
+.block_posts {
+    display: flex;
+    height: 350px;
+    margin-bottom: 3%;
+    box-shadow: 10px 10px 10px #f2f2f2;
+}
+
+#img_recent_post,
+#para_recent_post,
+.img_posts,
+.para_posts {
+    height: 350px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#img_recent_post img,
+.img_posts img {
+    width: 319px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+#novel_recent_post,
+.novel_posts {
+    font-weight: bold;
+}
+
+#para_recent_post,
+.para_posts {
+    width: 100%;
+    padding: 4%;
+}
+
+#para_recent_post p,
+.para_posts p,
+#para_recent_post span,
+.para_posts span {
+    font-size: 16px !important;
+    text-align: justify !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#elts_recent_post,
+.elts_posts {
+    font-size: 12px;
+    margin-top: -2%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /********************* LEGALS MENTIONS & PRIVACY POLICY *********************/

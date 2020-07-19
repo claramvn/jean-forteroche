@@ -4,12 +4,20 @@ namespace App\Controller;
 
 use \App\Model\PostManager;
 
-class FrontController
+class FrontController extends AncestorController
 {
     // Accueil
     public function home()
     {
         $postManager = new PostManager();
+
+        $postManager = new PostManager();
+
+        $recentPost = $postManager->getRecentPost();
+
+        if ($recentPost === false) {
+            $_SESSION['error_recentPost'] = "Impossible d'afficher le dernier chapitre";
+        }
         
         require('view/home.php');
     }
