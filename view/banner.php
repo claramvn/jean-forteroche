@@ -1,0 +1,1 @@
+<div id="banner2"><img src="public/img/banner2.png" alt="Bannière montagnes Alaska - Jean Forteroche" /></div>
