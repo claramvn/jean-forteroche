@@ -6,6 +6,7 @@ ini_set('error_reporting', E_ALL);
 require_once('vendor/autoload.php');
 
 use \App\Controller\FrontController;
+use \App\Controller\PostController;
 
 try {
     if (isset($_GET['action'])) {
@@ -31,6 +32,18 @@ try {
             case 'privacyPolicy':
                 $frontController = new FrontController();
                 $frontController->privacyPolicy();
+            break;
+
+            /*********************************************************************************
+            ************************************ PostController ******************************
+            *********************************************************************************/
+            
+            // FRONTEND
+
+            // Les chapitres
+            case 'listPosts':
+                $postController = new PostController;
+                $postController->listPosts();
             break;
             
             

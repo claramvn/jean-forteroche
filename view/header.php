@@ -10,7 +10,7 @@
                     <li><a href="index.php?action=author"><i class="fas
                                 fa-grip-lines-vertical"></i> L' AUTEUR</a>
                     </li>
-                    <li><a href="index.php?action=posts"><i class="fas
+                    <li><a href="index.php?action=listPosts"><i class="fas
                                 fa-grip-lines-vertical"></i> LES
                             CHAPITRES</a></li>
                 </ul>

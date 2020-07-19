@@ -321,6 +321,17 @@ ul {
     justify-content: space-between;
 }
 
+.button {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4% !important;
+}
+
+.button span {
+    font-size: 18px;
+    color: #EB5159;
+}
+
 /********************* LEGALS MENTIONS & PRIVACY POLICY *********************/
 
 #mentions,

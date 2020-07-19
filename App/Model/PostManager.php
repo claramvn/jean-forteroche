@@ -15,4 +15,14 @@ class PostManager extends Manager
         $recentPost = $req->fetch();
         return  $recentPost;
     }
+
+    // Listing chapitres
+    public function listPosts()
+    {
+        $db = $this->dbConnect();
+        $req = $db->query("SELECT * FROM chapters ORDER BY date_chapter DESC");
+        $req->execute(array());
+        $posts = $req->fetchAll();
+        return $posts;
+    }
 }
