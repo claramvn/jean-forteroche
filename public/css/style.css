@@ -20,6 +20,20 @@ ul {
     list-style-type: none;
 }
 
+.content {
+    padding: 2%;
+}
+
+.links {
+    font-size: 18px;
+    margin-bottom: 5%;
+}
+
+.red {
+    font-size: 14px;
+    color: #EB5159 !important;
+}
+
 /********************* HEADER TEMPLATE *********************/
 
 /* Header */
@@ -97,7 +111,7 @@ ul {
     margin-top: 16% !important;
 }
 
-/********************* HOME BANNER *********************/
+/********************* HOME BANNER FRONTEND *********************/
 
 #banner {
     margin-top: -1%;
@@ -135,6 +149,17 @@ ul {
 #text_banner p {
 
     font-size: 40px;
+}
+
+/********************* SECOND BANNER FRONTEND *********************/
+#banner2 {
+    height: 300px;
+    margin-bottom: 5%;
+}
+
+#banner2 img {
+    width: 100%;
+    position: absolute;
 }
 
 /********************* HOME INTRO *********************/
@@ -189,6 +214,30 @@ ul {
     font-size: 18px;
     text-align: justify;
     font-family: 'Montserrat', sans-serif !important;
+}
+
+/*********************  LEGALS MENTIONS & PRIVACY POLICY *********************/
+
+#mentions,
+#privacyPolicy {
+    width: 80%;
+    padding: 4%;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#mentions h1,
+#privacyPolicy h1 {
+    text-align: center;
+}
+
+#mentions a,
+#privacyPolicy a {
+    color: black;
+
 }
 
 /********************* FOOTER *********************/

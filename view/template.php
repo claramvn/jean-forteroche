@@ -28,7 +28,7 @@
     <p id="arrow"><a href="#"><i class="fas fa-arrow-up"></i></a></p>
     <!-- FOOTER -->
     <footer>
-        <p><a href="index.php?action=mentions">MENTIONS LÉGALES</a></p>
+        <p><a href="index.php?action=legalsMentions">MENTIONS LÉGALES</a></p>
         <p> © COPYRIGHT 2020 - CLARA MORVAN</p>
         <p><a href="index.php?action=privacyPolicy">POLITIQUE DE CONFIDENTIALITÉ</a></p>
     </footer>
