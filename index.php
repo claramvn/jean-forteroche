@@ -67,6 +67,20 @@ try {
                 $commentController->addComment();
             break;
 
+            // Signaler un commentaire
+            case 'reportComment':
+                $commentController = new CommentController;
+                $commentController->reportComment();
+            break;
+
+            // BACKEND
+
+            // Tableau de bord : Affichage des commentaires signalés
+            case 'adminReportedComments':
+                $commentController = new CommentController;
+                $commentController->adminReportedComments();
+            break;
+
             /*********************************************************************************
             ************************************ UserController ******************************
             *********************************************************************************/
