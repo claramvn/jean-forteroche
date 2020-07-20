@@ -32,9 +32,11 @@ require('auth_header.php');
     <!-- Formulaire -->
     <form action="index.php?action=register" method="post">
         <label for="pseudo_register">NOM D'UTILISATEUR</label><br />
-        <input type="text" name="pseudo_register" value="" required /><br /><br />
+        <input type="text" name="pseudo_register"
+            value="<?= $name ?>" required /><br /><br />
         <label for="email_register">ADRESSE E-MAIL</label><br />
-        <input type="text" name="email_register" placeholder="contact@nomdedomaine.com" value="" required /><br /><br />
+        <input type="text" name="email_register" placeholder="contact@nomdedomaine.com"
+            value="<?= $email ?>" required /><br /><br />
         <label for="pass_register">MOT DE PASSE</label><br />
         <input type="password" name="pass_register" placeholder="minimum 6 caractères" required /><br /><br />
         <label for="pass2_register">CONFIRMATION DE MOT DE PASSE</label><br />

@@ -35,8 +35,9 @@ require('auth_header.php');
             ?>
 
         <label for="email_resetPass">ADRESSE E-MAIL</label><br />
-        <input type="text" name="email_resetPass" value="" placeholder="contact@nomdedomaine.com"
-            required /><br /><br />
+        <input type="text" name="email_resetPass"
+            value="<?= $email ?>"
+            placeholder="contact@nomdedomaine.com" required /><br /><br />
         <label for="pass_resetPass">MOT DE PASSE</label><br />
         <input type="password" name="pass_resetPass" placeholder="minimum 6 caractères" required /><br /><br />
         <label for="pass2_resetPass">CONFIRMATION DU MOT DE PASSE</label><br />

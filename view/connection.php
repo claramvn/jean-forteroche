@@ -30,7 +30,8 @@ $admin_li2 = 'connexion_li2';
 
     <form action="index.php?action=connection" method="post">
         <label for="pseudo_connection">NOM D'UTILISATEUR</label><br />
-        <input type="text" name="pseudo_connection" value="" required /><br /><br />
+        <input type="text" name="pseudo_connection"
+            value="<?= $name ?>" required /><br /><br />
         <label for="pass_connection">MOT DE PASSE</label><br />
         <input type="password" name="pass_connection" required /><br /><br />
         <input id="button_form" type="submit" name="button_connection" value="SE CONNECTER" />
