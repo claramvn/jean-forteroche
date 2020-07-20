@@ -525,6 +525,20 @@ ul {
 
 /********************* INFORMATIONS BELLS *********************/
 
+.bell_square {
+    font-size: 8px;
+}
+
+.bell {
+    color: #3D58EF;
+    font-weight: bold;
+}
+
+.bell_ok {
+    color: #49A86B;
+    font-weight: bold;
+}
+
 .bell_alert {
     color: #EB5159;
     font-weight: bold;
@@ -605,6 +619,89 @@ ul {
 #privacyPolicy a {
     color: black;
 
+}
+
+/********************* ADMIN TEMPLATE *********************/
+
+#div_dashboard {
+    width: 100%;
+    display: flex;
+    margin-top: 6%;
+    margin-left: 2%;
+    justify-content: center;
+}
+
+#block_sidebar {
+    width: 15%;
+    min-height: 1200px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    background: #EDF1F4;
+}
+
+#block_sidebar .fas {
+    font-size: 25px;
+    color: #3D58EF;
+}
+
+#home_sidebar {
+    padding-top: 35%;
+    margin-bottom: 150px !important;
+}
+
+#block_sidebar p {
+    margin-bottom: 30%;
+}
+
+#banner_dashboard {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner_img {
+    width: 80%;
+    border-radius: 15px;
+    margin-left: 3%;
+    position: relative;
+}
+
+#special_banner_h1 {
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+#special_banner_h1 span {
+    color: #3D58EF;
+}
+
+/********************* DESIGN DISPLAY DASHBOARD *********************/
+
+.display_dash {
+    display: flex;
+    width: 100%;
+    margin-top: 2%;
+    border-radius: 4px;
+    background: #EDF1F4;
+
+}
+
+.display_dash div {
+    width: 15%;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+    font-weight: bold;
+    padding: 2%;
+    overflow: auto;
+}
+
+.div_avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
 }
 
 /********************* FOOTER *********************/
