@@ -47,6 +47,15 @@ class PostManager extends Manager
         return $addPost;
     }
 
+    // Modifier chapitre
+    public function updatePost($titlePost, $text, $image, $date, $postId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE chapters SET title_chapter = ?, text_chapter = ?, image_chapter = ?, date_chapter = ? WHERE id_chapter = ?');
+        $updatePost = $req->execute(array($titlePost, $text, $image, $date, $postId));
+        return $updatePost;
+    }
+
     // Supprimer un chapitre
     public function deletePost($postId)
     {
