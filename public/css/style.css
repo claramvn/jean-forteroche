@@ -34,6 +34,7 @@ ul {
     color: #EB5159 !important;
 }
 
+
 /********************* HEADER TEMPLATE *********************/
 
 /* Header */
@@ -780,6 +781,26 @@ ul {
     height: 100px;
     border-radius: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/********************* DISPLAY ADMIN ON FRONTEND *********************/
+
+#display_admin {
+    width: 90%;
+    padding: 2%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+#admin_delete_posts {
+    width: 4%;
+    padding: 0.5%;
+    margin-top: 5%;
+    font-size: 25px;
+    margin-right: 2%;
+    margin-left: auto;
+    text-align: center;
+    border: 2px solid #EB5159;
 }
 
 /********************* LEGALS MENTIONS & PRIVACY POLICY *********************/

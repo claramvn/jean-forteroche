@@ -103,8 +103,8 @@ class CommentController extends AncestorController
         }
     }
 
-    // Supprimer un commentaire signalé
-    public function deleteReportedComment()
+    // Supprimer
+    public function delete()
     {
         if (!$this->is_admin()) {
             header('Location: index.php');
@@ -116,12 +116,36 @@ class CommentController extends AncestorController
 
         $deleteComment = $commentManager->deleteComment($commentId);
 
-        if ($deleteComment === false) {
+        return $deleteComment;
+    }
+
+    // Supprimer un commentaire signalé
+    public function deleteReportedComment()
+    {
+        $this->delete();
+
+        if (!$this->delete()) {
             $_SESSION['error_comment'] = "Impossible de supprimer le commentaire";
             header('Location: index.php?action=adminReportedComments');
         } else {
             $_SESSION['success_comment'] = "Le commentaire a bien été supprimé";
             header('Location: index.php?action=adminReportedComments');
+        }
+    }
+
+    // Supprimer commentaire
+    public function adminDeleteComment()
+    {
+        $episodeId = $this->cleanParam($_GET['id_chapter']);
+
+        $this->delete();
+
+        if (!$this->delete($episodeId)) {
+            $_SESSION['error_com'] = "Impossible de supprimer le commentaire";
+            header('Location: index.php?action=getPost&id=' . $episodeId . '#block_comment');
+        } else {
+            $_SESSION['success_com'] = "Le commentaire a bien été supprimé";
+            header('Location: index.php?action=getPost&id=' . $episodeId . '#block_comment');
         }
     }
 }

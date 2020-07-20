@@ -119,6 +119,12 @@ try {
                 $commentController->deleteReportedComment();
             break;
 
+            // Supprimer un commentaire
+            case 'adminDeleteComment':
+                $commentController = new CommentController;
+                $commentController->adminDeleteComment();
+            break;
+
             /*********************************************************************************
             ************************************ UserController ******************************
             *********************************************************************************/

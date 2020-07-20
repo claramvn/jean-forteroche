@@ -75,8 +75,19 @@ require('banner.php');
                 <p><?= nl2br(htmlspecialchars($dataComments['content_comment'])) ?>
                 </p>
                 <div class="nav_comment">
+                    <?php
+                        if ($this->is_admin()) { ?>
+                    <a class="btn_suppr"
+                        href="index.php?action=adminDeleteComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>&amp;id_chapter=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
+                        title="SUPPRIMER LE COMMENTAIRE"><span class="bell_alert"><i
+                                class="far fa-trash-alt"></i></span></a>
+                    <?php
+                        } else {
+                            ?>
                     <a href="index.php?action=reportComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>&amp;id_chapter=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
                         title="SIGNALER"><span class="bell_alert"><i class="fas fa-exclamation-triangle"></i></span></a>
+                    <?php
+                        } ?>
                 </div>
             </div>
         </div>
@@ -116,7 +127,20 @@ require('banner.php');
     <?php
     }
     ?>
+    <?php
+    if ($this->is_admin()) { ?>
+    <div id="display_admin">
+        <div id="admin_delete_posts">
+            <a class="btn_suppr"
+                href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($post['id_chapter']) ?>"
+                title="SUPPRIMER LE CHAPITRE"><span class="bell_alert"><i class="far fa-trash-alt"></i></span>
+            </a>
+        </div>
+    </div>
 </div>
+<?php
+    }
+?>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php');
