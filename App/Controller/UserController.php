@@ -87,7 +87,6 @@ class UserController extends AncestorController
 
                     if ($addUser !== false) {
                         $user = $userManager->getUserByName($name);
-
                         // Id utilisateur en session
                         $_SESSION['id_user'] = $user['id_user'];
                         // Id utilisateur hashé en session
@@ -132,14 +131,15 @@ class UserController extends AncestorController
                 }
 
                 if (!$errors) {
+                    // Récup utilisateur en base par le nom
                     $user = $userManager->getUserByName($name);
+                    // Récup de son id
+                    $idUser = $user['id_user'];
+                    // Son id direction session
+                    $_SESSION['id_user'] = $idUser;
+                    // Son id version hashé en session
+                    $_SESSION['id_hash_user'] = $this->getPowerfulHash($idUser);
                     
-                    // Id utilisateur en session
-                    $_SESSION['id_user'] = $user['id_user'];
-                    // Id utilisateur hashé en session
-                    $chaine1 = $user['id_user'] . "essaiesDeTrouverMonHash2020";
-                    $_SESSION['id_hash_user'] = hash("sha256", $chaine1);
-
                     if ($this->is_admin()) {
                         header('Location: index.php?action=adminReportedComments');
                     } else {

@@ -9,21 +9,31 @@ class AncestorController
     /************** AUTHENTIFICATION  **************/
 
     // Utilisateur connécté
+    protected function getPowerfulHash($idUser)
+    {
+        $combo = $idUser . "essaiesDeTrouverMonHash2020";
+        $hashCombo = hash("sha256", $combo);
+        return $hashCombo;
+    }
+
+    // Utilisateur connécté
     protected function is_logged()
     {
         if (isset($_SESSION['id_user']) && isset($_SESSION['id_hash_user'])) {
+            // Id utilisateur qui tente une connection
             $id = $_SESSION['id_user'];
 
+            // Récup utilisateur en base par l'id
             $userManager = new UserManager();
             $this->user = $userManager->getUserById($id);
-
-            // hash de l'id récup à la connection
+            // Récup de son id
+            $idUser = $this->user['id_user'];
+            
+            //hash de l'id récup à la connection
             $hash1 = $_SESSION['id_hash_user'];
-
             // hash de l'id si utilisateur est en base
-            $chaine2 = $this->user['id_user'] . "essaiesDeTrouverMonHash2020";
-            $hash2 = hash("sha256", $chaine2);
-
+            $hash2 = $this->getPowerfulHash($idUser);
+       
             if ($hash1 === $hash2) {
                 return true;
             } else {
