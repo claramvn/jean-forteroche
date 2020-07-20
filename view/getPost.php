@@ -96,7 +96,20 @@ require('banner.php');
         }
         unset($_SESSION['success_com']);
         ?>
+    </div>
 
+    <!-- Formulaire Ajout commentaire -->
+    <div id="block_formComment">
+        <p id="para_addComment"><i class="far fa-comment-alt"></i> AJOUTER UN COMMENTAIRE</p>
+        <div id="form_comment">
+            <form
+                action="index.php?action=addComment&amp;id=<?= htmlspecialchars($post['id_chapter']) ?>"
+                method="post">
+                <textarea class="textarea_design" name="text_comment" placeholder="Votre Message"
+                    required></textarea><br /><br />
+                <input class="button_design" type="submit" name="button_comment" value="PUBLIER" />
+            </form>
+        </div>
     </div>
 
 </div>

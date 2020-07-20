@@ -16,4 +16,13 @@ class CommentManager extends Manager
         $comments = $req->fetchAll();
         return $comments;
     }
+
+    // Ajouter un commentaire
+    public function addComment($message, $postId, $userId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('INSERT INTO comments (content_comment, date_comment, alert_comment, id_chapter, id_user) VALUES (?, NOW(), 0, ?, ?)');
+        $comment = $req->execute(array($message, $postId, $userId));
+        return $comment;
+    }
 }

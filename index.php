@@ -7,6 +7,7 @@ require_once('vendor/autoload.php');
 
 use \App\Controller\FrontController;
 use \App\Controller\PostController;
+use \App\Controller\CommentController;
 
 try {
     if (isset($_GET['action'])) {
@@ -51,6 +52,18 @@ try {
             case 'getPost':
                 $postController = new PostController;
                 $postController->getPost();
+            break;
+
+            /*********************************************************************************
+            ********************************** CommentController *****************************
+            *********************************************************************************/
+
+            // FRONTEND
+
+            // Ajout commentaire
+            case 'addComment':
+                $commentController = new CommentController;
+                $commentController->addComment();
             break;
             
             
