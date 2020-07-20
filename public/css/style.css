@@ -369,6 +369,83 @@ ul {
 
 }
 
+/********************* COMMENTS FRONTEND *********************/
+
+#block_comment {
+    width: 60%;
+    margin: auto;
+}
+
+.comment {
+    width: 100%;
+    margin: 1%;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.img_comment,
+.content_comment {
+    padding: 1% !important;
+}
+
+.img_comment img {
+    width: 90px;
+    height: 90px;
+}
+
+.content_comment {
+    width: 100%;
+    margin-left: 1%;
+}
+
+.date_comment {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.nav_comment {
+    width: 30%;
+    margin-top: -1%;
+    margin-left: auto;
+    text-align: right;
+}
+
+/********************* COUNTS ELEMENTS *********************/
+
+.para_count {
+    font-size: 22px;
+    padding: 1%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+/********************* INFORMATIONS BELLS *********************/
+
+.bell_alert {
+    color: #EB5159;
+    font-weight: bold;
+}
+
+/********************* ERRORS/SUCCESS *********************/
+
+.error,
+.success {
+    padding: 2%;
+    margin-top: 2%;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.error {
+    color: white;
+    background: #EB5159;
+}
+
+.success {
+    color: white;
+    background: #49A86B;
+}
+
 /********************* LEGALS MENTIONS & PRIVACY POLICY *********************/
 
 #mentions,

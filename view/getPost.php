@@ -44,6 +44,61 @@ require('banner.php');
         </div>
     </div>
 
+
+    <!-- Nb Commentaire(s) -->
+    <div id="block_comment">
+        <?php
+        if ($countComments > 1) {
+            echo '<p class="para_count"> ' . $countComments . ' commentaires</p>';
+        } elseif ($countComments == 1) {
+            echo '<p class="para_count"> ' . $countComments . ' commentaire</p>';
+        } ?>
+
+        <!-- Commentaire -->
+        <?php
+        foreach ($comments as $dataComments) {
+            ?>
+
+        <div class="comment">
+            <div class="img_comment">
+                <img src="public/img/<?= htmlspecialchars($dataComments['avatar_user']) ?>"
+                    alt="Vignette Utilisateur - Billet simple pour l'Alaska" />
+            </div>
+            <div class="content_comment">
+                <h3><?= htmlspecialchars($dataComments['pseudo_user']) ?>,
+                    <span class="date_comment">
+                        <?php
+                            $date = $this->dateTimeUsToDateTimeFr(htmlspecialchars($dataComments['date_comment']));
+            echo $date; ?>
+                    </span>
+                </h3>
+                <p><?= nl2br(htmlspecialchars($dataComments['content_comment'])) ?>
+                </p>
+                <div class="nav_comment">
+                    <a href="index.php?action=reportComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>&amp;id_chapter=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
+                        title="SIGNALER"><span class="bell_alert"><i class="fas fa-exclamation-triangle"></i></span></a>
+                </div>
+            </div>
+        </div>
+        <?php
+        }
+        ?>
+
+        <!-- Message d'erreur ou succès -->
+        <?php
+        if (isset($_SESSION['error_com'])) {
+            echo '<p class="error"><i class="fas fa-times"></i> ' . $_SESSION['error_com'] . '</p>';
+        }
+        unset($_SESSION['error_com']);
+
+        if (isset($_SESSION['success_com'])) {
+            echo '<p class="success"><i class="fas fa-check"></i> ' . $_SESSION['success_com'] . '</p>';
+        }
+        unset($_SESSION['success_com']);
+        ?>
+
+    </div>
+
 </div>
 
 <?php $content = ob_get_clean(); ?>
