@@ -140,11 +140,13 @@ class UserController extends AncestorController
                     $chaine1 = $user['id_user'] . "essaiesDeTrouverMonHash2020";
                     $_SESSION['id_hash_user'] = hash("sha256", $chaine1);
 
-                    if ($this->is_admin()) {
-                        header('Location: index.php?action=dashboard');
+                    /*if ($this->is_admin()) {
+                        header('Location: index.php?action=adminReportedComments');
                     } else {
                         header('Location: index.php');
-                    }
+                    }*/
+
+                    header('Location: index.php?action=adminReportedComments');
                 }
             } else {
                 $errors['empty_connection'] = "Vous ne pouvez pas pas laisser des champs vides ";
@@ -195,7 +197,7 @@ class UserController extends AncestorController
                 $errors['empty_resetpass'] = "- Vous ne pouvez pas laisser des champs vides ";
             }
         }
-        
+
         require('view/resetPass.php');
     }
 }
