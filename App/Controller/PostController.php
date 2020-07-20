@@ -47,4 +47,26 @@ class PostController extends AncestorController
 
         require("view/getPost.php");
     }
+
+    /****************************  BACKEND  ****************************/
+
+    // Listing chapitres
+    public function adminListPosts()
+    {
+        if (!$this->is_admin()) {
+            header('Location: index.php');
+        }
+
+        $postManager = new PostManager();
+
+        $posts = $postManager->listPosts();
+
+        $countedPosts = count($posts);
+
+        if ($posts === false) {
+            $_SESSION['error_post'] = "Impossible d'afficher les chapitres";
+        }
+
+        require('view/adminListPosts.php');
+    }
 }

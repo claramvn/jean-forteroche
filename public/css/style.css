@@ -550,6 +550,11 @@ ul {
     font-weight: bold;
 }
 
+.bell_update {
+    color: #F8D428;
+    font-weight: bold;
+}
+
 .bell_alert {
     color: #EB5159;
     font-weight: bold;
@@ -726,6 +731,12 @@ ul {
     width: 60px;
     height: 60px;
     border-radius: 100%;
+}
+
+.space_create {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5%;
 }
 
 /********************* PAGE PROFIL *********************/

@@ -55,6 +55,14 @@ try {
                 $postController->getPost();
             break;
 
+            // BACKEND
+
+            // Afficher les chapitres
+            case 'adminListPosts':
+                $postController = new PostController;
+                $postController->adminListPosts();
+            break;
+
             /*********************************************************************************
             ********************************** CommentController *****************************
             *********************************************************************************/

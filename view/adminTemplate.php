@@ -62,7 +62,7 @@
                     MON SITE</a></p>
             <p><a href="index.php?action=adminReportedComments"><i class="fas fa-tachometer-alt"></i><br /><br />
                     TABLEAU DE BORD</a></p>
-            <p><a href="index.php?action=dashboardPosts"><i class="fas fa-book-open"></i><br /><br />
+            <p><a href="index.php?action=adminListPosts"><i class="fas fa-book-open"></i><br /><br />
                     LES CHAPITRES</a></p>
         </div>
 
