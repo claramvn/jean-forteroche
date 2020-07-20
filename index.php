@@ -8,6 +8,7 @@ require_once('vendor/autoload.php');
 use \App\Controller\FrontController;
 use \App\Controller\PostController;
 use \App\Controller\CommentController;
+use \App\Controller\UserController;
 
 try {
     if (isset($_GET['action'])) {
@@ -65,7 +66,28 @@ try {
                 $commentController = new CommentController;
                 $commentController->addComment();
             break;
-            
+
+            /*********************************************************************************
+            ************************************ UserController ******************************
+            *********************************************************************************/
+
+            // Inscription
+            case 'register':
+                $userController = new UserController;
+                $userController->register();
+            break;
+
+            // Connexion
+            case 'connection':
+                $userController = new UserController;
+                $userController->connection();
+            break;
+
+            // Mot de passe oublié
+            case 'resetPass':
+                $userController = new UserController;
+                $userController->resetPass();
+            break;
             
         }
     } else {
