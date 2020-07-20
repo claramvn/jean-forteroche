@@ -25,4 +25,14 @@ class PostManager extends Manager
         $posts = $req->fetchAll();
         return $posts;
     }
+
+    // Chapitre séléctionné
+    public function getPost($postId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare("SELECT * FROM chapters WHERE id_chapter = ?");
+        $req->execute(array($postId));
+        $post = $req->fetch();
+        return  $post;
+    }
 }

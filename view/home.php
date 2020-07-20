@@ -56,7 +56,7 @@ require('header.php');
                ?>
             </p>
             <p class="button"><a
-                    href="index.php?action=post&amp;id=<?= htmlspecialchars($recentPost['id_chapter'])?>">Lire
+                    href="index.php?action=getPost&amp;id=<?= htmlspecialchars($recentPost['id_chapter'])?>">Lire
                     la suite <span><i class=" fas
                     fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span></a>
             </p>
