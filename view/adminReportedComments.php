@@ -64,7 +64,7 @@ $title = 'Jean Forteroche - Tableau de bord';
                 title="AFFICHER"><span class="bell"><i class="far fa-eye"></i></span></a>
         </div>
         <div>
-            <a href="index.php?action=validateReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
+            <a href="index.php?action=undoReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
                 title="VALIDER"><span class="bell_ok"><i class="fas fa-check-square"></i></span></a>
         </div>
         <div>

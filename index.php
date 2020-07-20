@@ -81,6 +81,18 @@ try {
                 $commentController->adminReportedComments();
             break;
 
+            // Annuler le signalement d'un commentaire
+            case 'undoReportedComment':
+                $commentController = new CommentController;
+                $commentController->undoReportedComment();
+            break;
+
+            // Supprimer un commentaire signalé
+            case 'deleteReportedComment':
+                $commentController = new CommentController;
+                $commentController->deleteReportedComment();
+            break;
+
             /*********************************************************************************
             ************************************ UserController ******************************
             *********************************************************************************/

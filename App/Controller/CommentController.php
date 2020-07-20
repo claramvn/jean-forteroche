@@ -80,4 +80,48 @@ class CommentController extends AncestorController
 
         require('view/adminReportedComments.php');
     }
+
+    // Annuler le signalement du commentaire
+    public function undoReportedComment()
+    {
+        if (!$this->is_admin()) {
+            header('Location: index.php');
+        }
+
+        $commentManager = new CommentManager();
+
+        $commentId = $this->cleanParam($_GET['id']);
+
+        $undoReportComment = $commentManager->undoReportComment($commentId);
+
+        if ($undoReportComment === false) {
+            $_SESSION['error_comment'] = "Impossible de modérer le commentaire";
+            header('Location: index.php?action=adminReportedComments');
+        } else {
+            $_SESSION['success_comment'] = "Le commentaire a bien été validé";
+            header('Location: index.php?action=adminReportedComments');
+        }
+    }
+
+    // Supprimer un commentaire signalé
+    public function deleteReportedComment()
+    {
+        if (!$this->is_admin()) {
+            header('Location: index.php');
+        }
+
+        $commentManager = new CommentManager();
+
+        $commentId = $this->cleanParam($_GET['id']);
+
+        $deleteComment = $commentManager->deleteComment($commentId);
+
+        if ($deleteComment === false) {
+            $_SESSION['error_comment'] = "Impossible de supprimer le commentaire";
+            header('Location: index.php?action=adminReportedComments');
+        } else {
+            $_SESSION['success_comment'] = "Le commentaire a bien été supprimé";
+            header('Location: index.php?action=adminReportedComments');
+        }
+    }
 }

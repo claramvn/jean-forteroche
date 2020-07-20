@@ -46,4 +46,22 @@ class CommentManager extends Manager
         $reportedComments = $req->fetchAll();
         return $reportedComments;
     }
+
+    // Modérer un commentaire
+    public function undoReportComment($commentId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE comments SET alert_comment = 0 WHERE id_comment = ?');
+        $undoReportComment = $req->execute(array($commentId));
+        return $undoReportComment;
+    }
+
+    // Supprimer un commentaire
+    public function deleteComment($commentId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('DELETE FROM comments WHERE id_comment = ?');
+        $deleteComment = $req->execute(array($commentId));
+        return $deleteComment;
+    }
 }
