@@ -100,7 +100,7 @@ class UserController extends AncestorController
                     }
                 }
             } else {
-                $errors['empty_register'] = "- Vous ne pouvez pas laisser des champs vides ";
+                $errors['empty_register'] = "- Tous les champs sont nécessaires";
             }
         }
 
@@ -140,16 +140,14 @@ class UserController extends AncestorController
                     $chaine1 = $user['id_user'] . "essaiesDeTrouverMonHash2020";
                     $_SESSION['id_hash_user'] = hash("sha256", $chaine1);
 
-                    /*if ($this->is_admin()) {
+                    if ($this->is_admin()) {
                         header('Location: index.php?action=adminReportedComments');
                     } else {
                         header('Location: index.php');
-                    }*/
-
-                    header('Location: index.php?action=adminReportedComments');
+                    }
                 }
             } else {
-                $errors['empty_connection'] = "Vous ne pouvez pas pas laisser des champs vides ";
+                $errors['empty_connection'] = "Tous les champs sont nécessaires";
             }
         }
         require('view/connection.php');
@@ -194,10 +192,17 @@ class UserController extends AncestorController
                     header('Refresh:1.5;url=index.php?action=connection');
                 }
             } else {
-                $errors['empty_resetpass'] = "- Vous ne pouvez pas laisser des champs vides ";
+                $errors['empty_resetpass'] = "- Tous les champs sont nécessaires";
             }
         }
 
         require('view/resetPass.php');
+    }
+
+    // Déconnection
+    public function logout()
+    {
+        session_destroy();
+        header('Location: index.php');
     }
 }

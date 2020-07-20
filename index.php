@@ -102,6 +102,12 @@ try {
                 $userController = new UserController;
                 $userController->resetPass();
             break;
+
+            // Déconnection
+            case 'logout':
+                $userController = new UserController;
+                $userController->logout();
+            break;
             
         }
     } else {

@@ -43,4 +43,14 @@ class UserManager extends Manager
         $updatePass = $req->fetch();
         return $updatePass;
     }
+
+    // Récup utilisateur
+    public function getUserById($id)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('SELECT * FROM users WHERE id_user = ?');
+        $req->execute(array($id));
+        $user = $req->fetch();
+        return $user;
+    }
 }

@@ -99,6 +99,8 @@ require('banner.php');
     </div>
 
     <!-- Formulaire Ajout commentaire -->
+    <?php
+    if ($this->is_logged()) { ?>
     <div id="block_formComment">
         <p id="para_addComment"><i class="far fa-comment-alt"></i> AJOUTER UN COMMENTAIRE</p>
         <div id="form_comment">
@@ -111,7 +113,9 @@ require('banner.php');
             </form>
         </div>
     </div>
-
+    <?php
+    }
+    ?>
 </div>
 
 <?php $content = ob_get_clean(); ?>

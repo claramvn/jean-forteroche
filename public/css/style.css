@@ -111,6 +111,17 @@ ul {
     margin-top: 16% !important;
 }
 
+.connected {
+    font-weight: bold;
+    margin-left: -8%;
+    padding-right: 5%;
+}
+
+.red2 {
+    font-weight: bold;
+    color: #EB5159 !important;
+}
+
 /********************* HEADER AUTHENTIFICATION *********************/
 
 #header_admin {
@@ -675,6 +686,19 @@ ul {
 
 #special_banner_h1 span {
     color: #3D58EF;
+}
+
+.avatar_dashboard {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-top: -15% !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.li_dash {
+    padding-top: 3%;
+    margin-left: 4% !important;
 }
 
 /********************* DESIGN DISPLAY DASHBOARD *********************/

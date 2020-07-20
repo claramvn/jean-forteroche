@@ -37,13 +37,13 @@
                     </ul>
                 </nav>
             </div>
-            <div id="ul_user">
+            <div id="div_user">
                 <nav>
                     <ul class="second_nav_hover">
-                        <li><?php //echo '<img class="avatar_dashboard" src="public/img/' . $this->user['avatar_user'] .'"/>'?>
+                        <li><?php echo '<img class="avatar_dashboard" src="public/img/' . $this->user['avatar_user'] .'"/>'?>
                         </li>
                         <li class="li_dash">
-                            <?php //echo ' ' . mb_strtoupper($this->user['pseudo_user']) . ' <i class="fas fa-chevron-down"></i>';?>
+                            <?php echo ' ' . mb_strtoupper($this->user['pseudo_user']) . ' <i class="fas fa-chevron-down"></i>';?>
                             <ul class="second_ul">
                                 <li class="first_li"><a href="index.php?action=profil">PROFIL</a></li>
                                 <li><a href="index.php?action=logout">DÉCONNECTION</a></li>
@@ -69,7 +69,7 @@
         <!-- Bannière -->
         <div id="banner_dashboard">
             <img id="banner_img" src="public/img/banner_dashboard.png" />
-            <h1 id="special_banner_h1">Bienvenue, <br /><span></span>
+            <h1 id="special_banner_h1">Bienvenue, <br /><span><?= mb_strtoupper($this->user['pseudo_user']) ?></span>
                 !
             </h1>
 

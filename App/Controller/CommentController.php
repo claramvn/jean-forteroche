@@ -11,6 +11,10 @@ class CommentController extends AncestorController
     // Ajouter un commentaire
     public function addComment()
     {
+        if (!$this->is_logged()) {
+            header('Location: index.php');
+        }
+
         $commentManager = new CommentManager();
 
         if (isset($_POST['button_comment'])) {
@@ -23,7 +27,7 @@ class CommentController extends AncestorController
 
                 if ($comment === false) {
                     $_SESSION['error_com'] = "Impossible d'ajouter le commentaire";
-                    header('Location: index.php?action=post&id=' . $postId . '#block_comment');
+                    header('Location: index.php?action=getPost&id=' . $postId . '#block_comment');
                 } else {
                     $_SESSION['success_com'] = "Votre commentaire a bien été ajouté";
                     header('Location: index.php?action=getPost&id=' . $postId . '#block_comment');
@@ -59,6 +63,10 @@ class CommentController extends AncestorController
     // Affichage commentaire(s) signalé(s)
     public function adminReportedComments()
     {
+        if (!$this->is_admin()) {
+            header('Location: https://www.fbi.gov/');
+        }
+
         $commentManager = new CommentManager();
 
         $reportedComments = $commentManager->getReportedComments();
