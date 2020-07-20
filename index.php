@@ -10,6 +10,7 @@ use \App\Controller\PostController;
 
 try {
     if (isset($_GET['action'])) {
+        $action = trim(htmlspecialchars($_GET['action']));
         switch ($_GET['action']) {
 
             /*********************************************************************************
@@ -44,6 +45,12 @@ try {
             case 'listPosts':
                 $postController = new PostController;
                 $postController->listPosts();
+            break;
+
+            // Un Chapitre
+            case 'getPost':
+                $postController = new PostController;
+                $postController->getPost();
             break;
             
             
