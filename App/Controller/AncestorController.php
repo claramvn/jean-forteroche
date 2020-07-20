@@ -113,4 +113,45 @@ class AncestorController
         $segmentTime = $dateTimeUs[1];
         return $segmentTime;
     }
+
+    /************** TELECHARGEMENT FICHIERS  **************/
+
+    // Poids max
+    protected function checkMaxSize($file)
+    {
+        if ($file['size'] !== 0 && $file['size'] <= 3000000) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Extension téléchargée
+    protected function fileExtensionUpload($file)
+    {
+        $extensionUpload = pathinfo($file['name']);
+        $extension = $extensionUpload['extension'];
+        return $extension;
+    }
+
+    // Extensions autorisées
+    protected function fileExtensionAllowed()
+    {
+        $extension = array('jpg', 'jpeg', 'png', 'gif');
+        return $extension;
+    }
+
+    // Renommage
+    protected function newName($file, $extension)
+    {
+        $fileUpload = str_replace($file['name'], "alaska", $file['name']);
+        $file = $fileUpload . time() . '.' . $extension;
+        return $file;
+    }
+
+    // Téléchargement
+    protected function uploadFile($file, $newName)
+    {
+        move_uploaded_file($file['tmp_name'], 'public/img/' . $newName);
+    }
 }
