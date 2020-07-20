@@ -25,4 +25,25 @@ class CommentManager extends Manager
         $comment = $req->execute(array($message, $postId, $userId));
         return $comment;
     }
+
+    // Signaler un commentaire
+    public function reportComment($commentId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE comments SET alert_comment = 1 WHERE id_comment = ?');
+        $reportComment = $req->execute(array($commentId));
+        return $reportComment;
+    }
+
+    /************************************  BACKEND  ****************************/
+
+    // Affichage commentaires signalés
+    public function getReportedComments()
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare("SELECT c.id_comment, u.pseudo_user, u.avatar_user, c.content_comment, c.date_comment, c.alert_comment, c.id_chapter, c.id_user FROM comments AS c LEFT JOIN users AS u ON c.id_user = u.id_user WHERE c.alert_comment > 0 ORDER BY c.date_comment DESC ");
+        $req->execute(array());
+        $reportedComments = $req->fetchAll();
+        return $reportedComments;
+    }
 }
