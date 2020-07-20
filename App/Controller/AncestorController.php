@@ -2,8 +2,51 @@
 
 namespace App\Controller;
 
+use \App\Model\UserManager;
+
 class AncestorController
 {
+    /************** AUTHENTIFICATION  **************/
+
+    // Utilisateur connécté
+    protected function is_logged()
+    {
+        if (isset($_SESSION['id_user']) && isset($_SESSION['id_hash_user'])) {
+            $id = $_SESSION['id_user'];
+
+            $userManager = new UserManager();
+            $this->user = $userManager->getUserById($id);
+
+            // hash de l'id récup à la connection
+            $hash1 = $_SESSION['id_hash_user'];
+
+            // hash de l'id si utilisateur est en base
+            $chaine2 = $this->user['id_user'] . "essaiesDeTrouverMonHash2020";
+            $hash2 = hash("sha256", $chaine2);
+
+            if ($hash1 === $hash2) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    // Administrateur
+    protected function is_admin()
+    {
+        if ($this->is_logged()) {
+            if ($this->user['rank_user'] !== "1") {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
     /**************  NETTOYAGE PARAMETRES **************/
 
 
