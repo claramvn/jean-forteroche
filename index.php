@@ -120,6 +120,12 @@ try {
                 $userController = new UserController;
                 $userController->logout();
             break;
+
+            // Profil
+            case 'updateProfil':
+                $userController = new UserController;
+                $userController->updateProfil();
+            break;
             
         }
     } else {

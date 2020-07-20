@@ -199,6 +199,100 @@ class UserController extends AncestorController
         require('view/resetPass.php');
     }
 
+    // Profil utilisateur
+    public function updateProfil()
+    {
+        if (!$this->is_logged()) {
+            header('Location: index.php');
+        }
+
+        $name = $this->user['pseudo_user'];
+        $email = $this->user['email_user'];
+        $avatar = $this->user['avatar_user'];
+        $id = $this->user['id_user'];
+
+        $errors = [];
+        $success = [];
+
+        if (isset($_POST['button_update_profil'])) {
+            $userManager = new UserManager();
+            $name = $this->cleanParam($_POST['pseudo_user']);
+            $email = $this->cleanParam($_POST['email_user']);
+
+            // Vérif champs vides
+            if (empty($name) && empty($email)) {
+                $errors['empty_profil'] = "- Tous les champs sont nécessaires";
+            }
+
+            // Si pseudo non identique à l'ancien et si déjà existant en base
+            if ($this->user['pseudo_user'] !== $name) {
+                $user = $userManager->getUserByName($name);
+
+                if ($user['pseudo_user'] === $name) {
+                    $errors['name_profil'] = "- Nom d'utilisateur déjà existant";
+                }
+                
+                if (!$errors) {
+                    $success['pseudo_profil'] = "- Le pseudo a bien été modifié";
+                } else {
+                    $name = $this->user['pseudo_user'];
+                }
+            }
+
+            // Si email non identique à l'ancien et si déjà existant en base
+            if ($this->user['email_user'] !== $email) {
+                $emailExist = $userManager->emailExist($email);
+
+                if ($emailExist['email_user'] === $email) {
+                    $errors['email_profil'] = "- Adresse e-mail déjà utilisée ";
+                }
+            
+                if (!$this->cleanEmail($email)) {
+                    $errors['email_profil'] = "- Le format de l'adresse e-mail n'est pas valide ";
+                }
+            
+                if (!$errors) {
+                    $success['email_profil'] = "- L'adresse e-mail a bien été modifié";
+                } else {
+                    $email = $this->user['email_user'];
+                }
+            }
+            
+            // Traitement image
+            if (isset($_FILES["file_profil"]) && $_FILES["file_profil"]["error"] == 0) {
+                $file = $_FILES['file_profil'];
+                $fileExtensionUpload = $this->fileExtensionUpload($file);
+                $fileExtensionAllowed = $this->fileExtensionAllowed();
+                $newName = $this->newName($file, $fileExtensionUpload);
+
+
+                if (!$this->checkMaxSize($file)) {
+                    $errors['size_img_profil'] = "Impossible de modifier l'image : le fichier est trop volumineux";
+                }
+
+                if (!in_array($fileExtensionUpload, $fileExtensionAllowed)) {
+                    $errors['extension_img_profil'] = "Impossible de modifier l'image : le fichier n'est pas au format jpg/jpeg/png/gif";
+                }
+
+                if (!$errors) {
+                    $avatar = $newName;
+                    $fileUpload = $this->uploadFile($file, $newName);
+                    $success['img_profil'] = "- L'image a bien été modifiée";
+                } else {
+                    $avatar = $this->user['avatar_user'];
+                }
+            }
+
+            $updateUser = $userManager->updateUser($email, $avatar, $name, $id);
+
+            if (!$updateUser) {
+                $errors['req_profil'] = "Impossible de modifier le profil";
+            }
+        }
+
+        require('view/updateProfil.php');
+    }
+
     // Déconnection
     public function logout()
     {

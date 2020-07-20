@@ -45,7 +45,7 @@
                         <li class="li_dash">
                             <?php echo ' ' . mb_strtoupper($this->user['pseudo_user']) . ' <i class="fas fa-chevron-down"></i>';?>
                             <ul class="second_ul">
-                                <li class="first_li"><a href="index.php?action=profil">PROFIL</a></li>
+                                <li class="first_li"><a href="index.php?action=updateProfil">PROFIL</a></li>
                                 <li><a href="index.php?action=logout">DÉCONNECTION</a></li>
                             </ul>
                         </li>

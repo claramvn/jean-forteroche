@@ -29,7 +29,7 @@
                             <?php if ($this->is_admin()) { ?>
                             <li class="first_li"><a href="index.php?action=adminReportedComments">TABLEAU DE BORD</a>
                             </li>
-                            <li><a href="index.php?action=profil">PROFIL</a></li>
+                            <li><a href="index.php?action=updateProfil">PROFIL</a></li>
                             <li><a href="index.php?action=logout">DÉCONNECTION</a></li>
                             <?php } else { ?>
                             <li class="first_li"><a href="index.php?action=profil">PROFIL</a></li>

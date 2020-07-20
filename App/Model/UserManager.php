@@ -53,4 +53,13 @@ class UserManager extends Manager
         $user = $req->fetch();
         return $user;
     }
+
+    // Modif profil utilisateur
+    public function updateUser($email, $avatar, $name, $id)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE users SET pseudo_user = ?, email_user = ?, avatar_user = ? WHERE id_user = ?');
+        $updateUser = $req->execute(array($name,$email, $avatar, $id));
+        return $updateUser;
+    }
 }
