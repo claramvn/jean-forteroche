@@ -12,7 +12,7 @@ $title = 'Jean Forteroche - Les chapitres';
     <div class="block_dash">
         <h1>Liste des chapitres,</h1>
         <p>Créer, modifier ou supprimer les chapitres du roman en ligne.
-            <a href="index.php?action=addPost">
+            <a href="index.php?action=adminAddPost">
                 <span class="space_create">NOUVEAU CHAPITRE</span> <span class="red"><i class=" fas
                     fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span>
             </a>
@@ -66,13 +66,13 @@ $title = 'Jean Forteroche - Les chapitres';
                 </a>
             </div>
             <div>
-                <a href="index.php?action=updatePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
+                <a href="index.php?action=adminUpdatePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
                     title="MODIFIER"><span class="bell_update"><i class="fas fa-pen"></i></span>
                 </a>
             </div>
             <div>
                 <a class="btn_suppr"
-                    href="index.php?action=deletePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
+                    href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
                     title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span>
                 </a>
             </div>

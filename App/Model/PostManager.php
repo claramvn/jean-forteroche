@@ -35,4 +35,24 @@ class PostManager extends Manager
         $post = $req->fetch();
         return  $post;
     }
+
+    /************************************  BACKEND  ****************************/
+
+    // Ajouter un chapitre
+    public function addPost($novel, $titlePost, $text, $image)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('INSERT INTO chapters (novel_chapter, title_chapter, text_chapter, image_chapter, date_chapter) VALUES (?, ?, ?, ?, NOW())');
+        $addPost = $req->execute(array($novel, $titlePost, $text, $image));
+        return $addPost;
+    }
+
+    // Supprimer un chapitre
+    public function deletePost($postId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('DELETE FROM chapters WHERE id_chapter = ?');
+        $deletePost = $req->execute(array($postId));
+        return $deletePost;
+    }
 }

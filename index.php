@@ -63,6 +63,18 @@ try {
                 $postController->adminListPosts();
             break;
 
+            // Ajouter un chapitre
+            case 'adminAddPost':
+                $postController = new PostController;
+                $postController->adminAddPost();
+            break;
+
+            // Supprimer un chapitre
+            case 'adminDeletePost':
+                $postController = new PostController;
+                $postController->adminDeletePost();
+            break;
+
             /*********************************************************************************
             ********************************** CommentController *****************************
             *********************************************************************************/

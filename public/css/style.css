@@ -426,6 +426,18 @@ ul {
     font-family: 'Montserrat', sans-serif !important;
 }
 
+#text_post div p,
+#text_post div span {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 18px !important;
+    text-align: justify !important;
+}
+
+#text_post a {
+    color: #1A88D6 !important;
+    text-decoration: underline !important;
+}
+
 #text_post h1 {
     text-align: center !important;
     margin-bottom: 8%;
@@ -613,30 +625,6 @@ ul {
     cursor: pointer;
 }
 
-/********************* LEGALS MENTIONS & PRIVACY POLICY *********************/
-
-#mentions,
-#privacyPolicy {
-    width: 80%;
-    padding: 4%;
-    font-size: 18px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#mentions h1,
-#privacyPolicy h1 {
-    text-align: center;
-}
-
-#mentions a,
-#privacyPolicy a {
-    color: black;
-
-}
-
 /********************* ADMIN TEMPLATE *********************/
 
 #div_dashboard {
@@ -739,6 +727,21 @@ ul {
     margin-left: 5%;
 }
 
+/********************* TEXTAREA/TINY MCE *********************/
+
+.textarea_tiny {
+    width: 100%;
+    min-height: 350px;
+}
+
+.mce-notification-inner {
+    display: none !important;
+}
+
+.tox-notifications-container {
+    display: none !important;
+}
+
 /********************* PAGE PROFIL *********************/
 
 #logo_profil {
@@ -754,6 +757,30 @@ ul {
     height: 100px;
     border-radius: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/********************* LEGALS MENTIONS & PRIVACY POLICY *********************/
+
+#mentions,
+#privacyPolicy {
+    width: 80%;
+    padding: 4%;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#mentions h1,
+#privacyPolicy h1 {
+    text-align: center;
+}
+
+#mentions a,
+#privacyPolicy a {
+    color: black;
+
 }
 
 /********************* FOOTER *********************/
