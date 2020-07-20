@@ -4,6 +4,15 @@ namespace App\Controller;
 
 class AncestorController
 {
+    /**************  NETTOYAGE PARAMETRES **************/
+
+
+    // Nettoyage des paramètres
+    protected function cleanParam($param)
+    {
+        $clean = trim(htmlspecialchars($param));
+        return $clean;
+    }
 
     /************** CREATION FORMAT INTRODUCTION **************/
 
