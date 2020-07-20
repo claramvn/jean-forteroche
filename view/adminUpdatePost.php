@@ -20,7 +20,7 @@ $title = 'Jean Forteroche - Modifier un chapitre';
         <img class="img_update"
             src="public/img/<?= htmlspecialchars($image) ?>"
             alt="Billet simple pour l'Alaska - Jean Forteroche" /><br /><br />
-        <input type="file" name="file_chapter" /><br /><br />
+        <input type="file" name="file_chapter" accept="image/png, image/jpeg, image/jpg" /><br /><br />
         <label for="title_chapter">CHAPITRE</label><br />
         <input type="text" name="title_chapter"
             value="<?= htmlspecialchars($titlePost) ?>"

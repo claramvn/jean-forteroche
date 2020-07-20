@@ -137,7 +137,7 @@ class AncestorController
     // Extensions autorisées
     protected function fileExtensionAllowed()
     {
-        $extension = array('jpg', 'jpeg', 'png', 'gif');
+        $extension = array('jpg', 'jpeg', 'png');
         return $extension;
     }
 

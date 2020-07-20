@@ -27,7 +27,7 @@ require('header.php');
         <!-- Formulaire Profil -->
         <form action="index.php?action=updateProfil" method="post" enctype="multipart/form-data">
             <label for="file_profil">IMAGE :</label><br />
-            <input type="file" name="file_profil" /><br /><br />
+            <input type="file" name="file_profil" accept="image/png, image/jpeg, image/jpg" /><br /><br />
             <label for="pseudo_user">PSEUDO</label><br />
             <input type="text" name="pseudo_user"
                 value="<?= htmlspecialchars($name) ?>"><br /><br />

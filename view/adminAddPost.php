@@ -14,7 +14,8 @@ $title = 'Jean Forteroche - Créer un chapitre';
     <!-- Formulaire -->
     <form id="form_create" action="index.php?action=adminAddPost" method="post" enctype="multipart/form-data">
 
-        <label for="file_chapter">IMAGE : <input type="file" name="file_chapter" required /></label><br />
+        <label for="file_chapter">IMAGE : <input type="file" name="file_chapter"
+                accept="image/png, image/jpeg, image/jpg" required /></label><br />
         <label for="title_chapter">CHAPITRE</label><br />
         <input type="text" name="title_chapter" placeholder="Chapitre VI"
             value="<?= $titlePost ?>" required><br /><br />
