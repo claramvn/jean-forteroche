@@ -69,7 +69,7 @@ $title = 'Jean Forteroche - Tableau de bord';
         </div>
         <div>
             <a class="btn_suppr"
-                href="index.php?action=deleteReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
+                href="index.php?action=deleteReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
                 title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span></a>
         </div>
     </div>

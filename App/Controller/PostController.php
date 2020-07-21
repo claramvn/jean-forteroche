@@ -238,7 +238,7 @@ class PostController extends AncestorController
         $commentId = $this->cleanParam($_GET['id']);
 
         $deletePost = $postManager->deletePost($postId);
-        $deleteComment = $commentManager->deleteComment($commentId);
+        $deleteComment = $commentManager->deleteCommentWhereDeletedPost($commentId);
 
         if ($deletePost === false) {
             $_SESSION['error_post'] = "Impossible de supprimer le chapitre";
