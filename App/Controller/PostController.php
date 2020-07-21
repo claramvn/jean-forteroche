@@ -64,6 +64,7 @@ class PostController extends AncestorController
         $countedPosts = count($posts);
 
         if ($posts === false) {
+            header('Location: index.php');
             $_SESSION['error_post'] = "Impossible d'afficher les chapitres";
         }
 
@@ -141,7 +142,7 @@ class PostController extends AncestorController
         $post = $postManager->getPost($postId);
     
         if ($post === false) {
-            $errors['display_update_post'] = "- Impossible d'afficher le chapitre";
+            header('Location: index.php?action=adminListPosts');
         }
     
         $titlePost = $post['title_chapter'];
@@ -216,6 +217,7 @@ class PostController extends AncestorController
     
             if ($updatePost === false) {
                 $errors['update_post'] = "Impossible de modifier le chapitre";
+                header('Location: index.php?action=adminListPosts');
             }
         }
     
@@ -230,10 +232,13 @@ class PostController extends AncestorController
         }
 
         $postManager = new PostManager();
+        $commentManager = new CommentManager();
 
         $postId = $this->cleanParam($_GET['id']);
+        $commentId = $this->cleanParam($_GET['id']);
 
         $deletePost = $postManager->deletePost($postId);
+        $deleteComment = $commentManager->deleteComment($commentId);
 
         if ($deletePost === false) {
             $_SESSION['error_post'] = "Impossible de supprimer le chapitre";
