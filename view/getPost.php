@@ -78,7 +78,7 @@ require('banner.php');
                     <?php
                         if ($this->is_admin()) { ?>
                     <a class="btn_suppr"
-                        href="index.php?action=adminDeleteComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>&amp;id_chapter=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
+                        href="index.php?action=adminDeleteComment&amp;id=<?= htmlspecialchars($dataComments['id_chapter']) ?>&amp;id_chapter=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
                         title="SUPPRIMER LE COMMENTAIRE"><span class="bell_alert"><i
                                 class="far fa-trash-alt"></i></span></a>
                     <?php

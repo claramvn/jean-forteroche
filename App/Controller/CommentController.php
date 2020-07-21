@@ -77,7 +77,7 @@ class CommentController extends AncestorController
             $_SESSION['error_comment'] = "Impossible d'afficher les commentaire(s) signalé(s)";
             header('Location: index.php?action=adminReportedComments');
         }
-
+        
         require('view/adminReportedComments.php');
     }
 

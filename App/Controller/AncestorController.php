@@ -57,10 +57,9 @@ class AncestorController
             return false;
         }
     }
+
     /**************  NETTOYAGE PARAMETRES **************/
 
-
-    // Nettoyage des paramètres
     protected function cleanParam($param)
     {
         $clean = trim(htmlspecialchars($param));
