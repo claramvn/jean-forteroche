@@ -76,7 +76,7 @@ require('banner.php');
                 </p>
                 <div class="nav_comment">
                     <?php
-                        if ($this->is_admin()) { ?>
+                        if ($this->isAdmin()) { ?>
                     <a class="btn_suppr"
                         href="index.php?action=adminDeleteComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>&amp;id_chapter=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
                         title="SUPPRIMER LE COMMENTAIRE"><span class="bell_alert"><i
@@ -111,7 +111,7 @@ require('banner.php');
 
     <!-- Formulaire Ajout commentaire -->
     <?php
-    if ($this->is_logged()) { ?>
+    if ($this->isLogged()) { ?>
     <div id="block_formComment">
         <p id="para_addComment"><i class="far fa-comment-alt"></i> AJOUTER UN COMMENTAIRE</p>
         <div id="form_comment">
@@ -128,7 +128,7 @@ require('banner.php');
     }
     ?>
     <?php
-    if ($this->is_admin()) { ?>
+    if ($this->isAdmin()) { ?>
     <div id="display_admin">
         <div id="admin_delete_posts">
             <a class="btn_suppr"

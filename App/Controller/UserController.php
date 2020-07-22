@@ -142,7 +142,7 @@ class UserController extends AncestorController
                     // Son id version hashé en session
                     $_SESSION['id_hash_user'] = $this->getPowerfulHash($idUser);
                     
-                    if ($this->is_admin()) {
+                    if ($this->isAdmin()) {
                         header('Location: index.php?action=adminReportedComments');
                     } else {
                         header('Location: index.php');
@@ -204,7 +204,7 @@ class UserController extends AncestorController
     // Profil utilisateur
     public function updateProfil()
     {
-        if (!$this->is_logged()) {
+        if (!$this->isLogged()) {
             header('Location: index.php');
         }
 

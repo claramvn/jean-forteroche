@@ -11,7 +11,7 @@ class CommentController extends AncestorController
     // Ajouter un commentaire
     public function addComment()
     {
-        if (!$this->is_logged()) {
+        if (!$this->isLogged()) {
             header('Location: index.php');
         }
 
@@ -63,7 +63,7 @@ class CommentController extends AncestorController
     // Affichage commentaire(s) signalé(s)
     public function adminReportedComments()
     {
-        if (!$this->is_admin()) {
+        if (!$this->isAdmin()) {
             header('Location: https://www.fbi.gov/');
         }
 
@@ -84,7 +84,7 @@ class CommentController extends AncestorController
     // Annuler le signalement du commentaire
     public function undoReportedComment()
     {
-        if (!$this->is_admin()) {
+        if (!$this->isAdmin()) {
             header('Location: index.php');
         }
 
@@ -106,7 +106,7 @@ class CommentController extends AncestorController
     // Supprimer
     public function delete()
     {
-        if (!$this->is_admin()) {
+        if (!$this->isAdmin()) {
             header('Location: index.php');
         }
 
@@ -122,6 +122,10 @@ class CommentController extends AncestorController
     // Supprimer un commentaire signalé
     public function deleteReportedComment()
     {
+        if (!$this->isAdmin()) {
+            header('Location: index.php');
+        }
+
         $this->delete();
 
         if (!$this->delete()) {
@@ -136,6 +140,10 @@ class CommentController extends AncestorController
     // Supprimer commentaire
     public function adminDeleteComment()
     {
+        if (!$this->isAdmin()) {
+            header('Location: index.php');
+        }
+        
         $episodeId = $this->cleanParam($_GET['id_chapter']);
 
         $this->delete();

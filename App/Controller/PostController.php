@@ -53,7 +53,7 @@ class PostController extends AncestorController
     // Listing chapitres
     public function adminListPosts()
     {
-        if (!$this->is_admin()) {
+        if (!$this->isAdmin()) {
             header('Location: index.php');
         }
 
@@ -74,7 +74,7 @@ class PostController extends AncestorController
     // Ajouter un chapitre
     public function adminAddPost()
     {
-        if (!$this->is_admin()) {
+        if (!$this->isAdmin()) {
             header('Location: index.php');
         }
     
@@ -131,7 +131,7 @@ class PostController extends AncestorController
     // Modifier un chapitre
     public function adminUpdatePost()
     {
-        if (!$this->is_admin()) {
+        if (!$this->isAdmin()) {
             header('Location: index.php');
         }
     
@@ -232,7 +232,7 @@ class PostController extends AncestorController
     // Supprimer un chapitre
     public function adminDeletePost()
     {
-        if (!$this->is_admin()) {
+        if (!$this->isAdmin()) {
             header('Location: index.php');
         }
 

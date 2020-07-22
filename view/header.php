@@ -22,11 +22,11 @@
                 <ul class="second_nav_hover">
                     <li>
                         <?php
-                        if ($this->is_logged()) {
+                        if ($this->isLogged()) {
                             echo '<span class="connected">BONJOUR' . ' <span class="red2">' . mb_strtoupper($this->user['pseudo_user']) . '</span> ! </span>' ?>
                         <i class="fas fa-user"></i>
                         <ul class="second_ul">
-                            <?php if ($this->is_admin()) { ?>
+                            <?php if ($this->isAdmin()) { ?>
                             <li class="first_li"><a href="index.php?action=adminReportedComments">TABLEAU DE BORD</a>
                             </li>
                             <li><a href="index.php?action=updateProfil">PROFIL</a></li>

@@ -17,7 +17,7 @@ class AncestorController
     }
 
     // Utilisateur connécté
-    protected function is_logged()
+    protected function isLogged()
     {
         if (isset($_SESSION['id_user']) && isset($_SESSION['id_hash_user'])) {
             // Id utilisateur qui tente une connection
@@ -45,9 +45,9 @@ class AncestorController
     }
 
     // Administrateur
-    protected function is_admin()
+    protected function isAdmin()
     {
-        if ($this->is_logged()) {
+        if ($this->isLogged()) {
             if ($this->user['rank_user'] !== "1") {
                 return false;
             } else {
