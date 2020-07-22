@@ -43,44 +43,48 @@ $title = 'Jean Forteroche - Les chapitres';
         ?>
 
     <!-- Chapitre(s) -->
-    <?php
+    <table id="table1">
+        <tr id="tr1">
+            <th>TITRE</th>
+            <th>IMAGE</th>
+            <th>DATE</th>
+            <th>VOIR & MODERER LES COMMENTAIRES</th>
+            <th>MODIFIER</th>
+            <th>SUPPRIMER</th>
+        </tr>
+    </table>
+    <table id="table2">
+        <?php
         foreach ($posts as $dataPosts) {
             ?>
-    <div class="display_dash">
-        <div>
-            <?= htmlspecialchars(mb_strtoupper($dataPosts['title_chapter'])) ?>
-        </div>
-        <div class="div_avatar">
-            <img src="public/img/<?= htmlspecialchars($dataPosts['image_chapter']) ?>"
-                alt="Vignette Utilisateur - Billet simple pour l'Alaska" />
-        </div>
-        <div>
-            <?php
-                    $date = $this->dateTimeUsToDateFr(htmlspecialchars($dataPosts['date_chapter']));
+        <tr id="tr2">
+            <td><?= htmlspecialchars(mb_strtoupper($dataPosts['title_chapter'])) ?>
+            </td>
+            <td><img src="public/img/<?= htmlspecialchars($dataPosts['image_chapter']) ?>"
+                    alt="Vignette Utilisateur - Billet simple pour l'Alaska" />
+            </td>
+            <td><?php
+                    $date = $this->dateTimeUsToDateTimeFr(htmlspecialchars($dataPosts['date_chapter']));
             echo $date; ?>
-        </div>
-        <div>
-            <a href="index.php?action=getPost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
-                title="AFFICHER"><span class="bell"><i class="far fa-eye"></i></span>
-            </a>
-        </div>
-        <div>
-            <a href="index.php?action=adminUpdatePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
-                title="MODIFIER"><span class="bell_update"><i class="fas fa-pen"></i></span>
-            </a>
-        </div>
-        <div>
-            <a class="btn_suppr"
-                href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
-                title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span>
-            </a>
-        </div>
-    </div>
-    <?php
+            </td>
+            <td><a href="index.php?action=getPost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
+                    title="AFFICHER"><span class="bell"><i class="far fa-eye"></i></span>
+                </a>
+            </td>
+            <td> <a href="index.php?action=adminUpdatePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
+                    title="MODIFIER"><span class="bell_update"><i class="fas fa-pen"></i></span>
+                </a>
+            </td>
+            <td><a class="btn_suppr"
+                    href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
+                    title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span>
+                </a>
+            </td>
+        </tr>
+        <?php
         }
         ?>
-
-
+    </table>
 
 </div>
 

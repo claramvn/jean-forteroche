@@ -40,44 +40,48 @@ $title = 'Jean Forteroche - Tableau de bord';
     ?>
 
     <!-- Commentaire(s) signalé(s) -->
-    <?php
+    <table id="table1">
+        <tr id="tr1">
+            <th>AVATAR</th>
+            <th>PSEUDO</th>
+            <th>DATE</th>
+            <th>COMMENTAIRE</th>
+            <th>AFFICHER</th>
+            <th>VALIDER</th>
+            <th>SUPPRIMER</th>
+        </tr>
+    </table>
+    <table id="table2">
+        <?php
         foreach ($reportedComments as $dataComments) {
             ?>
-    <div class="display_dash">
-        <div class="div_avatar"><img
-                src="public/img/<?= htmlspecialchars($dataComments['avatar_user']) ?>"
-                alt="Vignette Utilisateur - Billet simple pour l'Alaska" />
-        </div>
-        <div>
-            <?= htmlspecialchars($dataComments['pseudo_user']) ?>
-        </div>
-        <div>
-            <?php
+        <tr id="tr2">
+            <td><img src="public/img/<?= htmlspecialchars($dataComments['avatar_user']) ?>"
+                    alt="Vignette Utilisateur - Billet simple pour l'Alaska" />
+            </td>
+            <td><?= htmlspecialchars($dataComments['pseudo_user']) ?>
+            </td>
+            <td><?php
                     $date = $this->dateTimeUsToDateTimeFr(htmlspecialchars($dataComments['date_comment']));
             echo $date; ?>
-        </div>
-        <div>
-            <?=  '<i class="fas fa-angle-double-left"></i>  ' . htmlspecialchars($dataComments['content_comment']) . '  <i class="fas fa-angle-double-right"></i>' ?>
-        </div>
-        <div>
-            <a href="index.php?action=getPost&amp;id=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
-                title="AFFICHER"><span class="bell"><i class="far fa-eye"></i></span></a>
-        </div>
-        <div>
-            <a href="index.php?action=undoReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
-                title="VALIDER"><span class="bell_ok"><i class="fas fa-check-square"></i></span></a>
-        </div>
-        <div>
-            <a class="btn_suppr"
-                href="index.php?action=deleteReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
-                title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span></a>
-        </div>
-    </div>
-
-    <?php
+            </td>
+            <td> <?php echo '<i class="fas fa-angle-double-left"></i>  ' . htmlspecialchars($dataComments['content_comment']) . '  <i class="fas fa-angle-double-right"></i>' ?>
+            </td>
+            <td> <a href="index.php?action=getPost&amp;id=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
+                    title="AFFICHER"><span class="bell"><i class="far fa-eye"></i></span></a>
+            </td>
+            <td><a href="index.php?action=undoReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
+                    title="VALIDER"><span class="bell_ok"><i class="fas fa-check-square"></i></span></a>
+            </td>
+            <td><a class="btn_suppr"
+                    href="index.php?action=deleteReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
+                    title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span></a>
+            </td>
+        </tr>
+        <?php
         }
-    ?>
-
+        ?>
+    </table>
 </div>
 
 <?php $content = ob_get_clean(); ?>
