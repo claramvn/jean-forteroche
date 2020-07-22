@@ -16,8 +16,8 @@ $title = 'Jean Forteroche - Créer un chapitre';
 
         <label for="file_chapter">IMAGE : <input type="file" name="file_chapter"
                 accept="image/png, image/jpeg, image/jpg" required /></label><br />
-        <label for="title_chapter">CHAPITRE</label><br />
-        <input type="text" name="title_chapter" placeholder="Chapitre VI"
+        <label for="title_chapter">TITRE</label><br />
+        <input type="text" name="title_chapter"
             value="<?= $titlePost ?>" required><br /><br />
         <label for=" content_chapter">CONTENU</label><br />
         <textarea class="textarea_tiny"

@@ -155,7 +155,8 @@ class PostController extends AncestorController
             if (isset($_POST['button_update_chapter'])) {
                 $titlePost = $this->cleanParam($_POST['title_chapter']);
                 $text = $_POST['content_chapter'];
-
+                
+                
                 // Vérif champs vides
                 if (empty($titlePost) && empty($text)) {
                     $errors['empty_post'] = "- Tous les champs sont nécessaires";
@@ -203,15 +204,19 @@ class PostController extends AncestorController
                         $image = $post['image_chapter'];
                     }
                 }
-    
+
+                $newDate = $_POST['date_chapter'] . " " . $_POST['time_chapter'];
+
                 // Si modification date
-                if (isset($_POST['date_chapter']) && !empty($_POST['date_chapter']) && isset($_POST['time_chapter']) && !empty($_POST['time_chapter'])) {
+                if ($post['date_chapter'] !== $newDate) {
                     $dateUs = $this->cleanParam($_POST['date_chapter']);
                     $time = $this->cleanParam($_POST['time_chapter']);
                     $date = $dateUs . " " . $time;
                     $success['date_post'] = "- La date a bien été modifiée";
+                } else {
+                    $date = $post['date_chapter'];
                 }
-    
+
                 $updatePost = $postManager->updatePost($titlePost, $text, $image, $date, $postId);
     
                 if ($updatePost === false) {

@@ -13,19 +13,3 @@ if (btnSuppr) {
     })
 
 }
-
-/* Modification comportement pour inputs date formulaire de modif d'un post */
-
-var btnInput = document.querySelector('.btn_input');
-var dateInput = document.querySelector('.date_input');
-var timeInput = document.querySelector('.time_input');
-
-if (btnInput) {
-    btnInput.addEventListener("click", () => {
-        dateInput.style.display = "block";
-        dateInput.disabled = false;
-        timeInput.style.display = "block";
-        timeInput.disabled = false;
-    })
-
-}

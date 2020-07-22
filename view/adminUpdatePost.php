@@ -21,7 +21,7 @@ $title = 'Jean Forteroche - Modifier un chapitre';
             src="public/img/<?= htmlspecialchars($image) ?>"
             alt="Billet simple pour l'Alaska - Jean Forteroche" /><br /><br />
         <input type="file" name="file_chapter" accept="image/png, image/jpeg, image/jpg" /><br /><br />
-        <label for="title_chapter">CHAPITRE</label><br />
+        <label for="title_chapter">TITRE</label><br />
         <input type="text" name="title_chapter"
             value="<?= htmlspecialchars($titlePost) ?>"
             required><br /><br />
@@ -32,20 +32,18 @@ $title = 'Jean Forteroche - Modifier un chapitre';
             <?php
                     $dateFr = $this->dateTimeUsToDateTimeFr(htmlspecialchars($date));
                     echo $dateFr; ?>
-            <a class="btn_input" href="#form_create">MODIFIER <span class="red">
-                    <i class=" fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>
-                </span></a></label>
+        </label>
         <div id="publication">
             <input class="date_input" type="date" name="date_chapter"
                 max="<?php echo date("Y-m-d");?>"
                 value="<?php
                     $dateUs = $this->getdateOfDateTimeUs($date);
                     echo $dateUs;
-                    ?>" disabled />
+                    ?>" />
             <input class="time_input" type="time" name="time_chapter" step="2" value="<?php
                     $timeUs = $this->getTimeOfDateTimeUs($date);
                     echo $timeUs;
-                    ?>" disabled />
+                    ?>" />
         </div><br /><br />
         <input id="button_form" type="submit" name="button_update_chapter" value="PUBLIER LE CHAPITRE" />
 

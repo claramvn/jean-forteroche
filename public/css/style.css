@@ -632,21 +632,14 @@ ul {
     height: auto;
 }
 
-.btn_input {
-    color: #767676;
-    font-size: 14px;
-    margin-left: 4%;
+#publication {
+    display: flex;
 }
 
 .date_input,
 .time_input {
-    display: none;
     width: 30% !important;
     margin: 2%;
-}
-
-#publication {
-    display: flex;
 }
 
 /********************* ADMIN TEMPLATE *********************/
