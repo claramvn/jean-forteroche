@@ -37,7 +37,7 @@ $title = 'Jean Forteroche - Modifier un chapitre';
             <input class="date_input" type="date" name="date_chapter"
                 max="<?php echo date("Y-m-d");?>"
                 value="<?php
-                    $dateUs = $this->getdateOfDateTimeUs($date);
+                    $dateUs = $this->getDateOfDateTimeUs($date);
                     echo $dateUs;
                     ?>" />
             <input class="time_input" type="time" name="time_chapter" step="2" value="<?php

@@ -108,7 +108,7 @@ class AncestorController
     }
 
     // Récup date us de datetime us
-    protected function getdateOfDateTimeUs($date)
+    protected function getDateOfDateTimeUs($date)
     {
         $dateTimeUs = explode(' ', $date);
         $segmentDate = $dateTimeUs[0];
