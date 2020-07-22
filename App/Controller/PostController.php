@@ -242,6 +242,10 @@ class PostController extends AncestorController
         $postId = $this->cleanParam($_GET['id']);
         $commentId = $this->cleanParam($_GET['id']);
 
+        $post = $postManager->getPost($postId);
+        $img = $post['image_chapter'];
+        unlink('public/img/' . $img);
+
         $deletePost = $postManager->deletePost($postId);
         $deleteComment = $commentManager->deleteCommentWhereDeletedPost($commentId);
 
