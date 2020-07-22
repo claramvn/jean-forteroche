@@ -82,6 +82,7 @@ class PostController extends AncestorController
     
         $titlePost = "";
         $text = "";
+        $date = "";
         $errors = [];
     
         if (isset($_POST['button_create_chapter'])) {
@@ -89,6 +90,9 @@ class PostController extends AncestorController
             $titlePost = $this->cleanParam($_POST['title_chapter']);
             $text = $this->cleanParam($_POST['content_chapter']);
             $file = $_FILES['file_chapter'];
+            $inputDate = $this->cleanParam($_POST['date_chapter']);
+            $inputTime = $this->cleanParam($_POST['time_chapter']);
+            $date = $inputDate . " " . $inputTime;
         
             $fileExtensionUpload = $this->fileExtensionUpload($file);
             $fileExtensionAllowed = $this->fileExtensionAllowed();
@@ -114,7 +118,7 @@ class PostController extends AncestorController
                 $fileUpload = $this->uploadFile($file, $newName);
                 $image = $newName;
     
-                $addPost = $postManager->addPost($novel, $titlePost, $text, $image);
+                $addPost = $postManager->addPost($novel, $titlePost, $text, $image, $date);
     
                 if ($addPost === false) {
                     $errors['req_post'] = "Impossible de modifier l'article";

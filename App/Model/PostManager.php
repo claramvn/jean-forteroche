@@ -39,11 +39,11 @@ class PostManager extends Manager
     /************************************  BACKEND  ****************************/
 
     // Ajouter un chapitre
-    public function addPost($novel, $titlePost, $text, $image)
+    public function addPost($novel, $titlePost, $text, $image, $date)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('INSERT INTO chapters (novel_chapter, title_chapter, text_chapter, image_chapter, date_chapter) VALUES (?, ?, ?, ?, NOW())');
-        $addPost = $req->execute(array($novel, $titlePost, $text, $image));
+        $req = $db->prepare('INSERT INTO chapters (novel_chapter, title_chapter, text_chapter, image_chapter, date_chapter) VALUES (?, ?, ?, ?, ?)');
+        $addPost = $req->execute(array($novel, $titlePost, $text, $image, $date));
         return $addPost;
     }
 

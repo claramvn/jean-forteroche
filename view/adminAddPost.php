@@ -21,7 +21,19 @@ $title = 'Jean Forteroche - Créer un chapitre';
             value="<?= $titlePost ?>" required><br /><br />
         <label for=" content_chapter">CONTENU</label><br />
         <textarea class="textarea_tiny"
-            name="content_chapter"><?= $text ?></textarea><br /><br />
+            name="content_chapter"><?= $text ?></textarea><br /><br /><br />
+        <label>DATE DE PUBLICATION :
+            <?php
+            echo date('d/m/Y à H:i:s'); ;
+            ?>
+        </label>
+        <div id="publication">
+            <input class="date_input" type="date" name="date_chapter"
+                max="<?php echo date("Y-m-d");?>"
+                value="<?php echo date("Y-m-d");?>" />
+            <input class="time_input" type="time" name="time_chapter" step="2"
+                value="<?php echo date("H:i:s");?>" />
+        </div><br /><br />
         <input id="button_form" type="submit" name="button_create_chapter" value="PUBLIER LE CHAPITRE" />
 
         <!-- Messages d'erreurs -->
