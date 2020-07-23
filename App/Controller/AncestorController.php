@@ -70,7 +70,7 @@ class AncestorController
 
     protected function cutContent($content)
     {
-        $length = 550;
+        $length = 450;
         if (strlen(htmlspecialchars_decode($content)) >= $length) {
             // Contenu entier
             $allContent = htmlspecialchars_decode($content);

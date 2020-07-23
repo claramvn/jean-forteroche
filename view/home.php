@@ -79,25 +79,21 @@ require('header.php');
             <div id="square"></div>
             <div id="square2">
                 <p>
-                    <i class="fa fa-quote-left"></i> Un roi souris déclare que la souris capable de faire de la soupe à
-                    la brochette deviendrait son épouse, la reine.
-                    La première souricelle rencontre des elfes qui font un arbre
-                    de mai avec une brochette, puis le décorent, dansent, font de la musique.
-                    De retour, elle a un petit bâton qui imite les bruits de la cuisine mais aucune soupe…
-                    La seconde souricelle, née dans une bibliothèque, écoute sa grand-mère lui dire que le poète est
-                    fait
-                    d’intelligence,
-                    d’imagination et de sentiment.
-                    Elle part à la rechecherde de ces trois ingrédients et mange des livres.
-                    Au lieu de faire de la soupe, elle raconte des histoires.
-                    La quatrième souricelle revient avec la théorie que « la soupe à la brochette » n’était qu’une
-                    expression utilisée par les hommes.
-                    La troisième souricelle dit au roi comment faire la fameuse soupe mais qu’il devra la remuer avec sa
-                    queue et seulement la sienne.
-                    Le roi acquiesce : c’est la soupe à la brochette mais on la fera plus tard car il ne veut pas se
-                    brûler…
-                    et
-                    c’est ainsi que la troisième souricelle devint reine.
+                    <i class="fa fa-quote-left"></i> Alice s'endort sur une pelouse, près de sa grande sœur. Elle voit
+                    un grand lapin blanc qui porte un gilet et une montre à gousset : il est pressé. Elle le suit et
+                    tombe dans un terrier : la chute dure très longtemps et elle arrive dans une pièce close.
+
+                    Ses aventures commencent par une bouteille où il est écrit "buvez-moi" et qui la fait rapetisser, et
+                    un gâteau où il est écrit "mangez-moi" et qui la fait grandir démesurément. L'enjeu sera d'avoir la
+                    bonne taille pour franchir la porte du pays des merveilles.
+
+                    Mais elle n'y arrive pas et ses larmes trempent une multitude de petits animaux. Elle organise une
+                    course pour les sécher, discute avec un vers à soie bleu qui fume, rencontre une duchesse qui a une
+                    tête énorme, prend le thé avec un chapelier fou, un loir et un lièvre de mars.
+
+                    Enfin, elle retrouve le jardin qu'elle cherchait au début, joue au croquet avec une reine obsédée
+                    par la décapitation de ses sujets, récite poèmes et chansons avec un griffon et une tortue et
+                    termine dans un tribunal où l'on juge un serviteur pour le vol d'un gâteau.
                     <i class="fa fa-quote-right"></i>
                 </p>
             </div>
