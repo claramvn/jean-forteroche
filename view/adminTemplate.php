@@ -68,7 +68,7 @@
 
         <!-- Bannière -->
         <div id="banner_dashboard">
-            <img id="banner_img" src="public/img/banner_dashboard.png" />
+            <img id="banner_img" src="public/img/adminbanner.png" />
             <h1 id="special_banner_h1">Bienvenue, <br /><span><?= mb_strtoupper($this->user['pseudo_user']) ?></span>
                 !
             </h1>
