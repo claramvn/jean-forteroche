@@ -14,18 +14,8 @@ $title = 'Jean Forteroche - Tableau de bord';
         <h1>Tableau de bord,</h1>
         <p>Retrouver la liste des commentaires jugés inappropriés par les utilisateurs.
         </p><br /><br />
-
-        <!-- Nb commentaire(s) signalé(s) -->
-        <h2>
-            <span class="bell_square"><i class="fas fa-square"></i></span>
-            <?php
-            if ($countReportedComments > 0) {
-                echo ' <span class="bell_alert">' . $countReportedComments . '</span> commentaire(s) signalé(s) ' ;
-            } else {
-                echo ' <span class="bell">' . $countReportedComments . '</span> commentaire signalé ';
-            } ?>
-        </h2>
     </div>
+
 
     <!--Message erreurs/succès -->
     <?php
@@ -40,6 +30,19 @@ $title = 'Jean Forteroche - Tableau de bord';
     ?>
 
     <!-- Commentaire(s) signalé(s) -->
+
+    <!-- Nb commentaire(s) signalé(s) -->
+    <?php
+            if ($countReportedComments <= 0) {
+                ?>
+    <h2><span class="bell_square"><i class="fas fa-square"></i> </span><span class="bell"><?= $countReportedComments ?></span>
+        commentaire
+        signalé</h2>
+    <?php
+            } else {
+                ?>
+    <h2><span class="bell_square"><i class="fas fa-square"></i> </span><span class="bell_alert"><?= $countReportedComments ?></span> commentaire(s)
+        signalé(s)</h2>
     <table id="table1">
         <tr id="tr1">
             <th>AVATAR</th>
@@ -52,6 +55,8 @@ $title = 'Jean Forteroche - Tableau de bord';
         </tr>
     </table>
     <table id="table2">
+        <?php
+            } ?>
         <?php
         foreach ($reportedComments as $dataComments) {
             ?>

@@ -17,18 +17,6 @@ $title = 'Jean Forteroche - Les chapitres';
         </a>
     </p><br /><br />
 
-    <!-- Nb chapitre(s) -->
-    <div>
-        <h2> <span class="bell_square"><i class="fas fa-square"></i></span>
-            <?php
-            if ($countedPosts > 1) {
-                echo ' <span class="bell">' . $countedPosts . '</span> chapitres' ;
-            } else {
-                echo ' <span class="bell">' . $countedPosts . '</span> chapitre';
-            } ?>
-        </h2>
-    </div>
-
     <!--MESSAGES D'ERREURS OU SUCCES -->
     <?php
         if (isset($_SESSION['error_post'])) {
@@ -43,6 +31,19 @@ $title = 'Jean Forteroche - Les chapitres';
         ?>
 
     <!-- Chapitre(s) -->
+
+    <!-- Nb chapitre(s) -->
+
+    <?php
+        if ($countedPosts <= 0) {
+            ?>
+    <h2><span class="bell_square"><i class="fas fa-square"></i></span><span class="bell"><?= $countedPosts ?></span>chapitre
+    </h2>
+    <?php
+        } else {
+            ?>
+    <h2><span class="bell_square"><i class="fas fa-square"></i></span><span class="bell"><?= $countedPosts ?></span>
+        chapitre(s)</h2>
     <table id="table1">
         <tr id="tr1">
             <th>TITRE</th>
@@ -54,6 +55,8 @@ $title = 'Jean Forteroche - Les chapitres';
         </tr>
     </table>
     <table id="table2">
+        <?php
+        } ?>
         <?php
         foreach ($posts as $dataPosts) {
             ?>
