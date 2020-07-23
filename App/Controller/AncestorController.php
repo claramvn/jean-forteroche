@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use \App\Model\UserManager;
+use \App\Model\PostManager;
 
 class AncestorController
 {

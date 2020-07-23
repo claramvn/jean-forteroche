@@ -39,4 +39,10 @@ class FrontController extends AncestorController
     {
         require('view/privacyPolicy.php');
     }
+
+    // Politique de confidentialité
+    public function error404()
+    {
+        require('view/error404.php');
+    }
 }

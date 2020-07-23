@@ -33,7 +33,7 @@ class CommentController extends AncestorController
                     header('Location: index.php?action=getPost&id=' . $postId . '#block_comment');
                 }
             } else {
-                $_SESSION['error_com'] = "Le champ est nécessaire";
+                $_SESSION['error_com'] = "Le champ commentaire n'est pas renseigné";
                 header('Location: index.php?action=getPost&id=' . $postId . '#block_comment');
             }
         }
@@ -122,10 +122,6 @@ class CommentController extends AncestorController
     // Supprimer un commentaire signalé
     public function deleteReportedComment()
     {
-        if (!$this->isAdmin()) {
-            header('Location: index.php');
-        }
-
         $this->delete();
 
         if (!$this->delete()) {
@@ -140,10 +136,6 @@ class CommentController extends AncestorController
     // Supprimer commentaire
     public function adminDeleteComment()
     {
-        if (!$this->isAdmin()) {
-            header('Location: index.php');
-        }
-        
         $episodeId = $this->cleanParam($_GET['id_chapter']);
 
         $this->delete();

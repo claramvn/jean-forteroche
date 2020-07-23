@@ -37,6 +37,12 @@ try {
                 $frontController->privacyPolicy();
             break;
 
+            // Page erreur 404
+            case 'error404':
+                $frontController = new FrontController();
+                $frontController->error404();
+            break;
+
             /*********************************************************************************
             ************************************ PostController ******************************
             *********************************************************************************/
@@ -158,6 +164,11 @@ try {
                 $userController = new UserController;
                 $userController->updateProfil();
             break;
+
+            //Accueil
+            default:
+            $frontController = new FrontController();
+            $frontController->error404();
             
         }
     } else {
