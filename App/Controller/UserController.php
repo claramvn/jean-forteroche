@@ -277,6 +277,7 @@ class UserController extends AncestorController
                 }
 
                 if (!$errors) {
+                    unlink('public/img/' . $avatar);
                     $avatar = $newName;
                     $fileUpload = $this->uploadFile($file, $newName);
                     $success['img_profil'] = "- L'image a bien été modifiée";
