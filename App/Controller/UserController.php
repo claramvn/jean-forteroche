@@ -86,13 +86,9 @@ class UserController extends AncestorController
                     $addUser = $userManager->addUser($name, $email, $pass, $avatar);
 
                     if ($addUser !== false) {
-                        // Récup utilisateur en base par le nom
                         $user = $userManager->getUserByName($name);
-                        // Récup de son id
                         $idUser = $user['id_user'];
-                        // Son id direction session
                         $_SESSION['id_user'] = $idUser;
-                        // Son id version hashé en session
                         $_SESSION['id_hash_user'] = $this->getPowerfulHash($idUser);
 
                         header('Location: index.php');
@@ -133,13 +129,9 @@ class UserController extends AncestorController
                 }
 
                 if (!$errors) {
-                    // Récup utilisateur en base par le nom
                     $user = $userManager->getUserByName($name);
-                    // Récup de son id
                     $idUser = $user['id_user'];
-                    // Son id direction session
                     $_SESSION['id_user'] = $idUser;
-                    // Son id version hashé en session
                     $_SESSION['id_hash_user'] = $this->getPowerfulHash($idUser);
                     
                     if ($this->isAdmin()) {

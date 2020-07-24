@@ -80,6 +80,8 @@ class AncestorController
             // Retourne segment du contenu de 0 à position recherchée
             $content = substr(nl2br($allContent), 0, $lastPos) .' ...';
             return $content;
+        } else {
+            return htmlspecialchars_decode($content);
         }
     }
 

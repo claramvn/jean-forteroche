@@ -74,8 +74,7 @@ class CommentController extends AncestorController
         $countReportedComments = count($reportedComments);
 
         if ($reportedComments === false) {
-            $_SESSION['error_comment'] = "Impossible d'afficher les commentaire(s) signalé(s)";
-            header('Location: index.php?action=adminReportedComments');
+            header('Location: index.php?action=error404');
         }
         
         require('view/adminReportedComments.php');
@@ -124,7 +123,7 @@ class CommentController extends AncestorController
     {
         $this->delete();
 
-        if (!$this->delete()) {
+        if ($this->delete() === false) {
             $_SESSION['error_comment'] = "Impossible de supprimer le commentaire";
             header('Location: index.php?action=adminReportedComments');
         } else {
@@ -140,7 +139,7 @@ class CommentController extends AncestorController
 
         $this->delete();
 
-        if (!$this->delete($episodeId)) {
+        if ($this->delete($episodeId) === false) {
             $_SESSION['error_com'] = "Impossible de supprimer le commentaire";
             header('Location: index.php?action=getPost&id=' . $episodeId . '#block_comment');
         } else {

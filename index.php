@@ -164,12 +164,6 @@ try {
                 $userController = new UserController;
                 $userController->updateProfil();
             break;
-
-            //Accueil
-            default:
-            $frontController = new FrontController();
-            $frontController->error404();
-            
         }
     } else {
         //Accueil
@@ -177,5 +171,5 @@ try {
         $frontController->home();
     }
 } catch (Exception $e) {
-    echo $e->getMessage();
+    "Erreur" . $e->getMessage();
 }

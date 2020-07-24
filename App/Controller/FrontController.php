@@ -11,12 +11,10 @@ class FrontController extends AncestorController
     {
         $postManager = new PostManager();
 
-        $postManager = new PostManager();
-
         $recentPost = $postManager->getRecentPost();
 
         if ($recentPost === false) {
-            $_SESSION['error_recentPost'] = "Impossible d'afficher le dernier chapitre";
+            header('Location: index.php?action=error404');
         }
         
         require('view/home.php');

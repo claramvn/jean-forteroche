@@ -32,17 +32,13 @@ class PostController extends AncestorController
         $postId = $this->cleanParam($_GET['id']);
 
         $post = $postManager->getPost($postId);
-    
-        if ($post === false) {
-            header('Location: index.php?action=error404');
-        }
 
         $comments = $commentManager->getCommentsByChapter($postId);
 
         $countComments = count($comments);
-
-        if ($comments === false) {
-            $_SESSION['error_com'] = "Impossible d'afficher le(s) commentaire(s)";
+ 
+        if ($post === false || $comments === false) {
+            header('Location: index.php?action=error404');
         }
 
         require("view/getPost.php");
@@ -119,12 +115,8 @@ class PostController extends AncestorController
     
                 $addPost = $postManager->addPost($novel, $titlePost, $text, $image, $date);
     
-                if ($addPost === false) {
-                    $errors['req_post'] = "Impossible de modifier l'article";
-                } else {
-                    $_SESSION['success_post'] = "Le chapitre a bien été créé";
-                    header('Location: index.php?action=adminListPosts');
-                }
+                $_SESSION['success_post'] = "Le chapitre a bien été créé";
+                header('Location: index.php?action=adminListPosts');
             }
         }
             
@@ -143,11 +135,10 @@ class PostController extends AncestorController
         // Récupération données chapitre séléctionné
         $postId = $this->cleanParam($_GET['id']);
         $post = $postManager->getPost($postId);
-        
+     
         if ($post === false) {
             header('Location: index.php?action=error404');
         }
-        
         $titlePost = $post['title_chapter'];
         $text = $post['text_chapter'];
         $image = $post['image_chapter'];
@@ -222,11 +213,6 @@ class PostController extends AncestorController
             }
 
             $updatePost = $postManager->updatePost($titlePost, $text, $image, $date, $postId);
-    
-            if ($updatePost === false) {
-                $errors['update_post'] = "Impossible de modifier le chapitre";
-                header('Location: index.php?action=adminListPosts');
-            }
         }
     
         require('view/adminUpdatePost.php');
