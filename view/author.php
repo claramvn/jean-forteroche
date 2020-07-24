@@ -34,11 +34,11 @@ require('banner.php');
         <div id="text_author">
             <h1>JEAN FORTEROCHE
             </h1>
-            <p>« Il est sur que Jean Forteroche est sûrement un très grand auteur de ce monde » c'est ce qu'a affirmé H.
-                Andersen junior mardi dernier à un parterre de journalistes rassemblés à Nantes pour le
+            <p>« Il est sur que Jean Forteroche est sûrement un très grand auteur de ce monde » c'est ce qu'a affirmé C.
+                Lewis junior mardi dernier à un parterre de journalistes rassemblés à Nantes pour le
                 rencontrer.<br /><br />
 
-                Cette déclaration de H. Andersen junior nous pousse à revenir sur la carrière de Jean Forteroche. Né en
+                Cette déclaration de C. Lewis junior nous pousse à revenir sur la carrière de Jean Forteroche. Né en
                 12/04/1980, il n'a eu de cesse depuis d'épater la galerie par ces incessants apports dans le monde de la
                 culture, en particulier au sein de la « confédération des auteurs de Nantes et de
                 Navarre » puissante association créée par Pinocchio.<br /><br />
@@ -52,7 +52,7 @@ require('banner.php');
 
                 Pour Jean Forteroche c'est une révélation, il s'attelle à la rédaction de : « Billet simple pour
                 l'Alaska ». Le livre est tant attendu qu'il décide de publier son roman en ligne, chapitre par chapitre,
-                pour le plus grand bonheur de ses lecteurs. Comme l'a si justement fait remarquer H. Andersen junior «
+                pour le plus grand bonheur de ses lecteurs. Comme l'a si justement fait remarquer C. Lewis junior «
                 Ce livre est une œuvre impérissable ».
             </p>
         </div>
