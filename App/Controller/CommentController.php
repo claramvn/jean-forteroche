@@ -20,9 +20,9 @@ class CommentController extends AncestorController
         if (isset($_POST['button_comment'])) {
             $userId = $this->user['id_user'];
             $message = $this->cleanParam($_POST['text_comment']);
-            $postId = $this->cleanParam($_GET['id']);
+            $postId = intval($this->cleanParam($_GET['id']));
 
-            if (!empty($message)) {
+            if (!empty($message) || !isset($postId) || $postId < 0) {
                 $comment = $commentManager->addComment($message, $postId, $userId);
 
                 if ($comment === false) {
@@ -44,12 +44,12 @@ class CommentController extends AncestorController
     {
         $commentManager = new CommentManager();
 
-        $commentId = $this->cleanParam($_GET['id']);
-        $episodeId = $this->cleanParam($_GET['id_chapter']);
+        $commentId = intval($this->cleanParam($_GET['id']));
+        $episodeId = intval($this->cleanParam($_GET['id_chapter']));
 
         $reportComment = $commentManager->reportComment($commentId);
 
-        if ($reportComment === false) {
+        if ($reportComment === false || !isset($commentId) || $commentId < 0 || !isset($episodeId) || $episodeId < 0) {
             $_SESSION['error_com'] = "Impossible de signaler le commentaire";
             header('Location: index.php?action=getPost&id=' . $episodeId . '#block_comment');
         } else {
@@ -89,11 +89,11 @@ class CommentController extends AncestorController
 
         $commentManager = new CommentManager();
 
-        $commentId = $this->cleanParam($_GET['id']);
+        $commentId = intval($this->cleanParam($_GET['id']));
 
         $undoReportComment = $commentManager->undoReportComment($commentId);
 
-        if ($undoReportComment === false) {
+        if ($undoReportComment === false || !isset($commentId) || $commentId < 0) {
             $_SESSION['error_comment'] = "Impossible de modérer le commentaire";
             header('Location: index.php?action=adminReportedComments');
         } else {
@@ -111,9 +111,13 @@ class CommentController extends AncestorController
 
         $commentManager = new CommentManager();
 
-        $commentId = $this->cleanParam($_GET['id']);
+        $commentId = intval($this->cleanParam($_GET['id']));
 
         $deleteComment = $commentManager->deleteComment($commentId);
+
+        if (!isset($commentId) || $commentId < 0) {
+            return false;
+        }
 
         return $deleteComment;
     }
@@ -135,11 +139,11 @@ class CommentController extends AncestorController
     // Supprimer commentaire
     public function adminDeleteComment()
     {
-        $episodeId = $this->cleanParam($_GET['id_chapter']);
+        $episodeId = intval($this->cleanParam($_GET['id_chapter']));
 
         $this->delete();
 
-        if ($this->delete($episodeId) === false) {
+        if ($this->delete($episodeId) === false || !isset($episodeId) || $episodeId < 0) {
             $_SESSION['error_com'] = "Impossible de supprimer le commentaire";
             header('Location: index.php?action=getPost&id=' . $episodeId . '#block_comment');
         } else {
