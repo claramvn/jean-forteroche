@@ -29,7 +29,7 @@ class PostController extends AncestorController
         $postManager = new PostManager();
         $commentManager = new CommentManager();
 
-        $postId = $this->cleanParam($_GET['id']);
+        $postId = intval($this->cleanParam($_GET['id']));
 
         $post = $postManager->getPost($postId);
 
@@ -37,7 +37,7 @@ class PostController extends AncestorController
 
         $countComments = count($comments);
  
-        if ($post === false || $comments === false) {
+        if ($post === false || $comments === false || !isset($postId) || $postId < 0) {
             header('Location: index.php?action=error404');
         }
 
@@ -133,10 +133,10 @@ class PostController extends AncestorController
         $postManager = new PostManager();
     
         // Récupération données chapitre séléctionné
-        $postId = $this->cleanParam($_GET['id']);
+        $postId = intval($this->cleanParam($_GET['id']));
         $post = $postManager->getPost($postId);
      
-        if ($post === false) {
+        if ($post === false || !isset($postId) || $postId < 0) {
             header('Location: index.php?action=error404');
         }
         $titlePost = $post['title_chapter'];
@@ -228,8 +228,8 @@ class PostController extends AncestorController
         $postManager = new PostManager();
         $commentManager = new CommentManager();
 
-        $postId = $this->cleanParam($_GET['id']);
-        $commentId = $this->cleanParam($_GET['id']);
+        $postId = intval($this->cleanParam($_GET['id']));
+        $commentId = intval($this->cleanParam($_GET['id']));
 
         $post = $postManager->getPost($postId);
         $img = $post['image_chapter'];
@@ -238,7 +238,7 @@ class PostController extends AncestorController
         $deletePost = $postManager->deletePost($postId);
         $deleteComment = $commentManager->deleteCommentWhereDeletedPost($commentId);
 
-        if ($deletePost === false) {
+        if ($deletePost === false || !isset($postId) || $postId < 0) {
             $_SESSION['error_post'] = "Impossible de supprimer le chapitre";
             header('Location: index.php?action=adminListPosts');
         } else {
