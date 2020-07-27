@@ -164,6 +164,11 @@ try {
                 $userController = new UserController;
                 $userController->updateProfil();
             break;
+
+            // Défaut : Page erreur 404
+            default:
+                $frontController = new FrontController();
+                $frontController->error404();
         }
     } else {
         //Accueil
