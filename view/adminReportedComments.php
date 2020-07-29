@@ -80,7 +80,8 @@ $title = 'Jean Forteroche - Tableau de bord';
             </td>
             <td><a class="btn_suppr"
                     href="index.php?action=deleteReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
-                    title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span></a>
+                    title="SUPPRIMER" onclick="confirmDelete()"><span class="bell_alert"><i
+                            class="far fa-trash-alt"></i></span></a>
             </td>
         </tr>
         <?php

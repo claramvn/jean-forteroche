@@ -79,7 +79,7 @@ require('banner.php');
                         if ($this->isAdmin()) { ?>
                     <a class="btn_suppr"
                         href="index.php?action=adminDeleteComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>&amp;id_chapter=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
-                        title="SUPPRIMER LE COMMENTAIRE"><span class="bell_alert"><i
+                        title="SUPPRIMER LE COMMENTAIRE" onclick="confirmDelete()"><span class="bell_alert"><i
                                 class="far fa-trash-alt"></i></span></a>
                     <?php
                         } else {
@@ -130,13 +130,11 @@ require('banner.php');
     <?php
     if ($this->isAdmin()) { ?>
     <div id="display_admin">
-        <div id="admin_delete_posts">
-            <a class="btn_suppr"
-                href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($post['id_chapter']) ?>"
-                title="SUPPRIMER LE CHAPITRE">SUPPRIMER LE CHAPITRE <span class="bell_alert"><i
-                        class="far fa-trash-alt"></i></span>
-            </a>
-        </div>
+        <a class="btn_suppr"
+            href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($post['id_chapter']) ?>"
+            title="SUPPRIMER LE CHAPITRE" onclick="confirmDelete()">SUPPRIMER LE CHAPITRE <span class="bell_alert"><i
+                    class="far fa-trash-alt"></i></span>
+        </a>
     </div>
 </div>
 <?php

@@ -336,14 +336,14 @@ ul {
     display: flex;
     height: 350px;
     margin-bottom: 3%;
-    box-shadow: 10px 10px 10px #f2f2f2;
+    box-shadow: 10px 10px 10px #EDF1F4;
 }
 
 #img_recent_post,
 #para_recent_post,
 .img_posts,
 .para_posts {
-    height: 350px;
+    min-height: 350px;
     font-family: 'Montserrat', sans-serif !important;
 }
 

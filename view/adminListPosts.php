@@ -80,7 +80,8 @@ $title = 'Jean Forteroche - Les chapitres';
             </td>
             <td><a class="btn_suppr"
                     href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($dataPosts['id_chapter']) ?>"
-                    title="SUPPRIMER"><span class="bell_alert"><i class="far fa-trash-alt"></i></span>
+                    title="SUPPRIMER" onclick="confirmDelete()"><span class="bell_alert"><i
+                            class="far fa-trash-alt"></i></span>
                 </a>
             </td>
         </tr>
