@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <title><?= $title ?>
     </title>
+    <!-- Mobiles -->
+    <meta name="viewport" content="width=device-width">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="public/img/littleLogo.png" />
     <!-- FontAwesome -->
