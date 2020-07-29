@@ -226,17 +226,14 @@ class PostController extends AncestorController
         }
 
         $postManager = new PostManager();
-        $commentManager = new CommentManager();
 
         $postId = intval($this->cleanParam($_GET['id']));
-        $commentId = intval($this->cleanParam($_GET['id']));
 
         $post = $postManager->getPost($postId);
         $img = $post['image_chapter'];
         unlink('public/img/' . $img);
 
         $deletePost = $postManager->deletePost($postId);
-        $deleteComment = $commentManager->deleteCommentWhereDeletedPost($commentId);
 
         if ($deletePost === false || !isset($postId) || $postId < 0) {
             $_SESSION['error_post'] = "Impossible de supprimer le chapitre";
