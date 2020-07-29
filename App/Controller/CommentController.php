@@ -53,7 +53,7 @@ class CommentController extends AncestorController
             $_SESSION['error_com'] = "Impossible de signaler le commentaire";
             header('Location: index.php?action=getPost&id=' . $episodeId . '#block_comment');
         } else {
-            $_SESSION['success_com'] = "Votre commentaire a bien été signalé, merci.";
+            $_SESSION['success_com'] = "Le commentaire a bien été signalé, merci.";
             header('Location: index.php?action=getPost&id=' . $episodeId . '#block_comment');
         }
     }

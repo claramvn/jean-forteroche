@@ -133,7 +133,8 @@ require('banner.php');
         <div id="admin_delete_posts">
             <a class="btn_suppr"
                 href="index.php?action=adminDeletePost&amp;id=<?= htmlspecialchars($post['id_chapter']) ?>"
-                title="SUPPRIMER LE CHAPITRE"><span class="bell_alert"><i class="far fa-trash-alt"></i></span>
+                title="SUPPRIMER LE CHAPITRE">SUPPRIMER LE CHAPITRE <span class="bell_alert"><i
+                        class="far fa-trash-alt"></i></span>
             </a>
         </div>
     </div>

@@ -776,22 +776,26 @@ td img {
 /********************* DISPLAY ADMIN ON FRONTEND *********************/
 
 #display_admin {
-    width: 90%;
+    width: 30%;
     padding: 2%;
-    margin: auto;
-    border-radius: 15px;
+    margin-top: 5%;
+    margin-right: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: auto;
 }
 
-#admin_delete_posts {
-    width: 4%;
-    padding: 0.5%;
-    margin-top: 5%;
-    font-size: 25px;
-    margin-right: 2%;
-    margin-left: auto;
-    text-align: center;
+#display_admin span {
+    padding: 1%;
+    margin-left: 1%;
+    color: #EB5159 !important;
     border: 2px solid #EB5159;
 }
+
+#display_admin a {
+    color: #EB5159 !important;
+}
+
 
 /********************* LEGALS MENTIONS & PRIVACY POLICY *********************/
 
