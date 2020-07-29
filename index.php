@@ -165,6 +165,12 @@ try {
                 $userController->updateProfil();
             break;
 
+            // Supprimer un utilisateur
+            case 'deleteUser':
+                $userController = new UserController;
+                $userController->deleteUser();
+            break;
+
             // Défaut : Page erreur 404
             default:
                 $frontController = new FrontController();

@@ -59,6 +59,18 @@ require('header.php');
         </form>
 
     </div>
+    <?php
+    if ($this->isLogged() && $this->user['rank_user'] !== "1") { ?>
+    <div id="display_account">
+        <div id="admin_delete_account">
+            <a class="btn_suppr" href="index.php?action=deleteUser" title="SUPPRIMER LE COMPTE">SUPPRIMER LE COMPTE
+                <span class="bell_alert"><i class="far fa-trash-alt"></i></span>
+            </a>
+        </div>
+    </div>
+    <?php
+    }
+?>
 </div>
 
 <div class="auth_space"></div>

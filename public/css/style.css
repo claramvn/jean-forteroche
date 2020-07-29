@@ -775,7 +775,8 @@ td img {
 
 /********************* DISPLAY ADMIN ON FRONTEND *********************/
 
-#display_admin {
+#display_admin,
+#display_account {
     width: 30%;
     padding: 2%;
     margin-top: 5%;
@@ -785,14 +786,16 @@ td img {
     margin-left: auto;
 }
 
-#display_admin span {
+#display_admin span,
+#display_account span {
     padding: 1%;
     margin-left: 1%;
     color: #EB5159 !important;
     border: 2px solid #EB5159;
 }
 
-#display_admin a {
+#display_admin a,
+#display_account a {
     color: #EB5159 !important;
 }
 

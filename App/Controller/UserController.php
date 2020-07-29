@@ -269,9 +269,14 @@ class UserController extends AncestorController
                 }
 
                 if (!$errors) {
-                    unlink('public/img/' . $avatar);
-                    $avatar = $newName;
                     $fileUpload = $this->uploadFile($file, $newName);
+
+                    $oldAvatar = $this->user['avatar_user'];
+                    $avatar = $newName;
+                    if ($oldAvatar === "thumbnail.jgp") {
+                        unlink('public/img/' . $oldAvatar);
+                    }
+
                     $success['img_profil'] = "- L'image a bien été modifiée";
                 } else {
                     $avatar = $this->user['avatar_user'];
@@ -293,5 +298,31 @@ class UserController extends AncestorController
     {
         session_destroy();
         header('Location: index.php');
+    }
+
+    // Supprimer un utilisateur
+    public function deleteUser()
+    {
+        if (!$this->isLogged()) {
+            header('Location: index.php');
+        }
+
+        $userManager = new UserManager();
+
+        $id = $this->user['id_user'];
+
+        if ($this->user['avatar_user'] !== "thumbnail.jgp") {
+            $img = $this->user['avatar_user'];
+            unlink('public/img/' . $img);
+        }
+
+        $deleteUser = $userManager->deleteUser($id);
+
+        if ($deleteUser === false) {
+            $errors['req_profil'] = "Impossible de modifier le profil";
+            header('Location: index.php?action=updateProfil');
+        } else {
+            header('Location: index.php');
+        }
     }
 }

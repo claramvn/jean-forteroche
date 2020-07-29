@@ -62,4 +62,13 @@ class UserManager extends Manager
         $updateUser = $req->execute(array($name,$email, $avatar, $id));
         return $updateUser;
     }
+
+    // Supprimer un chapitre
+    public function deleteUser($id)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('DELETE FROM users WHERE id_user = ?');
+        $deleteUser = $req->execute(array($id));
+        return $deleteUser;
+    }
 }
