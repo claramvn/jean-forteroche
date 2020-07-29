@@ -75,28 +75,25 @@ require('header.php');
         <div class="separation"></div>
         <h1> Billet simple pour l'Alaska </h1>
         <div class="separation"></div>
-        <div id="block_square">
-            <div id="square"></div>
-            <div id="square2">
-                <p>
-                    <i class="fa fa-quote-left"></i> Alice s'endort sur une pelouse, près de sa grande sœur. Elle voit
-                    un grand lapin blanc qui porte un gilet et une montre à gousset : il est pressé. Elle le suit et
-                    tombe dans un terrier : la chute dure très longtemps et elle arrive dans une pièce close.
+        <div id="square">
+            <p>
+                <i class="fa fa-quote-left"></i> Alice s'endort sur une pelouse, près de sa grande sœur. Elle voit
+                un grand lapin blanc qui porte un gilet et une montre à gousset : il est pressé. Elle le suit et
+                tombe dans un terrier : la chute dure très longtemps et elle arrive dans une pièce close.
 
-                    Ses aventures commencent par une bouteille où il est écrit "buvez-moi" et qui la fait rapetisser, et
-                    un gâteau où il est écrit "mangez-moi" et qui la fait grandir démesurément. L'enjeu sera d'avoir la
-                    bonne taille pour franchir la porte du pays des merveilles.
+                Ses aventures commencent par une bouteille où il est écrit "buvez-moi" et qui la fait rapetisser, et
+                un gâteau où il est écrit "mangez-moi" et qui la fait grandir démesurément. L'enjeu sera d'avoir la
+                bonne taille pour franchir la porte du pays des merveilles.
 
-                    Mais elle n'y arrive pas et ses larmes trempent une multitude de petits animaux. Elle organise une
-                    course pour les sécher, discute avec un vers à soie bleu qui fume, rencontre une duchesse qui a une
-                    tête énorme, prend le thé avec un chapelier fou, un loir et un lièvre de mars.
+                Mais elle n'y arrive pas et ses larmes trempent une multitude de petits animaux. Elle organise une
+                course pour les sécher, discute avec un vers à soie bleu qui fume, rencontre une duchesse qui a une
+                tête énorme, prend le thé avec un chapelier fou, un loir et un lièvre de mars.
 
-                    Enfin, elle retrouve le jardin qu'elle cherchait au début, joue au croquet avec une reine obsédée
-                    par la décapitation de ses sujets, récite poèmes et chansons avec un griffon et une tortue et
-                    termine dans un tribunal où l'on juge un serviteur pour le vol d'un gâteau.
-                    <i class="fa fa-quote-right"></i>
-                </p>
-            </div>
+                Enfin, elle retrouve le jardin qu'elle cherchait au début, joue au croquet avec une reine obsédée
+                par la décapitation de ses sujets, récite poèmes et chansons avec un griffon et une tortue et
+                termine dans un tribunal où l'on juge un serviteur pour le vol d'un gâteau.
+                <i class="fa fa-quote-right"></i>
+            </p>
         </div>
     </div>
 </div>
