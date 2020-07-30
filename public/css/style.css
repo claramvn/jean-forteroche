@@ -862,3 +862,289 @@ footer {
 footer a {
     color: white;
 }
+
+/********************* RESPONSIVE MOBILES *********************/
+
+
+@media all and (min-width: 320px) and (max-width: 599px) {
+
+    /* GENERAL SETTINGS */
+    .links {
+        font-size: 14px;
+    }
+
+    /* AUTHENTIFICATION */
+    #header_admin {
+        width: 100%;
+        margin: auto;
+    }
+
+    #header_admin img {
+        width: 100px;
+    }
+
+    #header_admin nav {
+        margin-left: -14%;
+    }
+
+    #header_admin li {
+        width: 40%;
+        font-size: 16px;
+        padding-top: 4%;
+    }
+
+    #form {
+        width: 90%;
+    }
+
+    /* ERROR & SUCCESS */
+    .error,
+    .success {
+        font-size: 18px;
+    }
+
+    /* HEADER */
+    #header {
+        height: 60px;
+    }
+
+    #div_pages {
+        width: 100%;
+        margin-left: -10%;
+    }
+
+    #div_pages li {
+        font-size: 10px;
+    }
+
+    #div_pages li:hover {
+        border-bottom: 2px solid black;
+    }
+
+    #tag {
+        width: 40px;
+    }
+
+    #div_user {
+        width: 25%;
+    }
+
+    .second_nav_hover {
+        margin-left: 8%;
+    }
+
+    .second_ul {
+        margin-top: 15%;
+    }
+
+    .second_ul li {
+        margin-left: -127%;
+        font-size: 10px;
+    }
+
+    /* HOME BANNER */
+    #banner img {
+        height: auto;
+    }
+
+    #text_banner {
+        width: 90%;
+        margin-top: 80px;
+        margin-left: 5%;
+    }
+
+    #text_banner h1 {
+        font-size: 15px;
+    }
+
+    #text_banner h2,
+    #text_banner p {
+        font-size: 10px;
+    }
+
+    /* BANNER */
+    #banner2 {
+        height: 70px;
+        margin-top: 60px;
+    }
+
+    /* RECENT ARTICLE / ARTICLES */
+    #recent_tag {
+        width: 30%;
+        font-size: 14px;
+    }
+
+    #block_recent_post,
+    .block_posts {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 5%;
+        margin-left: 1.5%;
+        margin-bottom: 10%;
+        border: 2px solid #EDF1F4;
+    }
+
+    #img_recent_post,
+    #para_recent_post,
+    .img_posts,
+    .para_posts {
+        margin: auto;
+        min-height: auto;
+        padding-top: 6%;
+    }
+
+    #img_recent_post h2,
+    #para_recent_post h2,
+    .img_posts h2,
+    .para_posts h2 {
+        font-size: 18px;
+    }
+
+    #img_recent_post p,
+    #para_recent_post p,
+    .img_posts p,
+    .para_posts p {
+        font-size: 14px !important;
+    }
+
+    #img_recent_post img,
+    .img_posts img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+    }
+
+    #elts_recent_post,
+    .elts_posts {
+        font-size: 12px;
+        flex-direction: column;
+    }
+
+    /* HOME INTRO */
+    #intro {
+        width: 90%;
+        height: auto;
+    }
+
+    #intro h1 {
+        font-size: 25px;
+    }
+
+    #square {
+        width: 90%;
+        margin-top: 10%;
+        font-size: 14px;
+        box-shadow: -3px -3px #EDF1F4;
+    }
+
+    /* ARTICLE */
+    #block_post {
+        width: 92%;
+        margin-top: 10%;
+    }
+
+    #text_post {
+        font-size: 14px !important;
+    }
+
+    #text_post h1 {
+        font-size: 20px;
+    }
+
+    .img_content {
+        width: 120px;
+        height: 120px;
+        margin-right: 2%;
+    }
+
+    #text_post div p,
+    #text_post div span {
+        font-size: 14px !important;
+    }
+
+    #block_comment {
+        width: 90%;
+    }
+
+    #block_formComment {
+        width: 85%;
+    }
+
+    .content_comment {
+        font-size: 12px;
+    }
+
+    .date_comment {
+        font-size: 10px;
+    }
+
+    .img_comment img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #para_addComment {
+        font-size: 16px;
+    }
+
+    #display_admin,
+    #display_account {
+        width: 100%;
+        margin-right: 0%;
+        font-size: 15px;
+        margin-left: 12%;
+    }
+
+    /* PAGE AUTHOR */
+    #block_author {
+        margin-top: 4%;
+        flex-direction: column;
+    }
+
+    #img_author {
+        width: 100%;
+        margin-left: 25%;
+    }
+
+    #img_author img {
+        width: 50%;
+    }
+
+    #text_author {
+        font-size: 14px;
+    }
+
+    #text_author h1 {
+        font-size: 20px;
+    }
+
+    /* LEGALS MENTIONS & PRIVACY POLICY */
+    #mentions,
+    #privacyPolicy {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #mentions h1,
+    #privacyPolicy h1 {
+        font-size: 20px;
+    }
+
+    /* FOOTER */
+    #arrow {
+        margin-bottom: 3.5%;
+        margin-top: 3.5%;
+        margin-right: 3%;
+    }
+
+    #arrow a {
+        padding: 2%;
+    }
+
+    footer {
+        font-size: 14px;
+        text-align: center !important;
+        flex-direction: column;
+    }
+}

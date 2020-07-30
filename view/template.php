@@ -6,7 +6,7 @@
     <title><?= $title ?>
     </title>
     <!-- Mobiles -->
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="public/img/littleLogo.png" />
     <!-- FontAwesome -->
