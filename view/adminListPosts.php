@@ -6,16 +6,18 @@ $title = 'Jean Forteroche - Les chapitres';
 <!-- Content -->
 <?php ob_start(); ?>
 
-<div class="content">
+<div class="back_content">
 
     <!-- Intro -->
-    <h1>Liste des chapitres,</h1>
-    <p>Créer, modifier ou supprimer les chapitres du roman en ligne.
-        <a href="index.php?action=adminAddPost">
-            <span class="space_create">NOUVEAU CHAPITRE</span> <span class="red"><i class=" fas
+    <div class="intro_dash">
+        <h1>Liste des chapitres,</h1>
+        <p>Créer, modifier ou supprimer les chapitres du roman en ligne.
+            <a href="index.php?action=adminAddPost">
+                <span class="space_create">NOUVEAU CHAPITRE</span> <span class="red"><i class=" fas
                     fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span>
-        </a>
-    </p><br /><br />
+            </a>
+        </p><br /><br />
+    </div>
 
     <!--MESSAGES D'ERREURS OU SUCCES -->
     <?php

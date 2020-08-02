@@ -7,10 +7,10 @@ $title = 'Jean Forteroche - Tableau de bord';
 <?php ob_start(); ?>
 
 
-<div class="content">
+<div class="back_content">
 
     <!-- Intro -->
-    <div>
+    <div class="intro_dash">
         <h1>Tableau de bord,</h1>
         <p>Retrouver la liste des commentaires jugés inappropriés par les utilisateurs.
         </p><br /><br />
@@ -35,9 +35,7 @@ $title = 'Jean Forteroche - Tableau de bord';
     <?php
             if ($countReportedComments <= 0) {
                 ?>
-    <h2><span class="bell_square"><i class="fas fa-square"></i> </span><span class="bell"><?= $countReportedComments ?></span>
-        commentaire
-        signalé</h2>
+    <h2><span class="bell_square"><i class="fas fa-square"></i> </span><span class="bell"><?= $countReportedComments ?></span> commentaire signalé</h2>
     <?php
             } else {
                 ?>

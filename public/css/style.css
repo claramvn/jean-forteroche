@@ -20,7 +20,8 @@ ul {
     list-style-type: none;
 }
 
-.content {
+.content,
+.back_content {
     padding: 2%;
 }
 
@@ -65,17 +66,21 @@ ul {
 }
 
 #div_pages,
-#div_pages ul {
+#admin_div_pages,
+#div_pages ul,
+#admin_div_pages ul {
     width: 160%;
 }
 
-#div_pages li {
+#div_pages li,
+#admin_div_pages li {
     margin-left: 1%;
     margin-right: 1%;
     margin-top: 1%;
 }
 
-#div_pages li:hover {
+#div_pages li:hover,
+#admin_div_pages li:hover {
     border-bottom: 4px solid black;
 }
 
@@ -83,7 +88,8 @@ ul {
     margin-top: -33%;
 }
 
-#div_user {
+#div_user,
+#admin_div_user {
     width: 50%;
 }
 
@@ -267,7 +273,7 @@ ul {
 
 #intro {
     width: 80%;
-    height: 1000px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
@@ -868,6 +874,8 @@ footer a {
 
 @media all and (min-width: 320px) and (max-width: 599px) {
 
+    /******** FRONTEND ********/
+
     /* GENERAL SETTINGS */
     .links {
         font-size: 14px;
@@ -880,7 +888,7 @@ footer a {
     }
 
     #header_admin img {
-        width: 100px;
+        width: 140px;
     }
 
     #header_admin nav {
@@ -910,7 +918,7 @@ footer a {
 
     #div_pages {
         width: 100%;
-        margin-left: -10%;
+        margin-left: -9%;
     }
 
     #div_pages li {
@@ -926,7 +934,7 @@ footer a {
     }
 
     #div_user {
-        width: 25%;
+        width: 30.5%;
     }
 
     .second_nav_hover {
@@ -940,6 +948,14 @@ footer a {
     .second_ul li {
         margin-left: -127%;
         font-size: 10px;
+    }
+
+    .connected {
+        display: none;
+    }
+
+    .mobile_connected {
+        color: green;
     }
 
     /* HOME BANNER */
@@ -1024,7 +1040,6 @@ footer a {
     /* HOME INTRO */
     #intro {
         width: 90%;
-        height: auto;
     }
 
     #intro h1 {
@@ -1122,7 +1137,7 @@ footer a {
     /* LEGALS MENTIONS & PRIVACY POLICY */
     #mentions,
     #privacyPolicy {
-        width: 100%;
+        width: 90%;
         font-size: 14px;
     }
 
@@ -1146,5 +1161,274 @@ footer a {
         font-size: 14px;
         text-align: center !important;
         flex-direction: column;
+    }
+
+    /******** BACKEND ********/
+
+    /* HEADER */
+    #admin_div_pages {
+        width: 50%;
+        margin-left: -5%;
+    }
+
+    #admin_div_user {
+        width: 60%;
+    }
+
+    .avatar_dashboard {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* DASHBOARD */
+    .back_content {
+        width: 99%;
+    }
+
+    .space_create {
+        font-size: 12px;
+    }
+
+    .red {
+        font-size: 10px;
+    }
+
+    .fas.fa-angle-double-left,
+    .fas.fa-angle-double-right {
+        font-size: 8px !important;
+    }
+
+    .bell_square {
+        font-size: 4px;
+        margin-right: 2%;
+    }
+
+    /* SIDEBAR */
+    #div_dashboard {
+        margin-top: 20%;
+    }
+
+    #block_sidebar {
+        width: 35%;
+        min-height: auto;
+        font-size: 10px;
+        border-radius: 5px;
+    }
+
+    #block_sidebar .fas {
+        font-size: 18px;
+    }
+
+    #home_sidebar {
+        margin-bottom: 60px !important;
+    }
+
+    /* BANNER */
+    #banner_dashboard {
+        width: 80%;
+    }
+
+    #banner_img {
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    #special_banner_h1 {
+        font-size: 14px;
+    }
+
+    /* INTRO PAGES */
+    .back_content h2 {
+        font-size: 13px;
+    }
+
+    .intro_dash h1 {
+        font-size: 14px;
+    }
+
+    .intro_dash p {
+        font-size: 12px;
+    }
+
+    /* PROFIL */
+    #logo_profil {
+        margin-top: 15%;
+    }
+
+    /* ARTICLES */
+    #table1 {
+        display: none;
+    }
+
+    #table2 {
+        width: 98%;
+        border: 0;
+        background: white;
+    }
+
+    tr {
+        display: block;
+        margin: 1%;
+        border: 1px solid #D5D8DB;
+    }
+
+    table td {
+        width: 100%;
+        padding: 5% !important;
+        display: flex;
+        background: #EDF1F4;
+        flex-direction: column;
+    }
+
+    table td img {
+        margin: auto;
+    }
+
+    /* FORMS */
+    #form_create {
+        width: 90%;
+    }
+
+    #form_create label {
+        font-size: 14px;
+    }
+
+    .date_input,
+    .time_input {
+        width: 50% !important;
+    }
+
+}
+
+/********************* RESPONSIVE TABLETTES *********************/
+
+@media all and (min-width: 600px) and (max-width: 1024px) {
+
+    /******** FRONTEND ********/
+
+    /* RECENT ARTICLE / ARTICLES */
+    #recent_tag {
+        width: 20%;
+        font-size: 16px;
+    }
+
+    #block_recent_post,
+    .block_posts {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 5%;
+        margin-left: 1.5%;
+        margin-bottom: 10%;
+        border: 2px solid #EDF1F4;
+    }
+
+    #img_recent_post,
+    #para_recent_post,
+    .img_posts,
+    .para_posts {
+        margin: auto;
+        min-height: auto;
+        padding-top: 6%;
+    }
+
+    #img_recent_post h2,
+    #para_recent_post h2,
+    .img_posts h2,
+    .para_posts h2 {
+        font-size: 20px;
+    }
+
+    #img_recent_post p,
+    #para_recent_post p,
+    .img_posts p,
+    .para_posts p {
+        font-size: 17px !important;
+    }
+
+    #img_recent_post img,
+    .img_posts img {
+        width: 180px;
+        height: 180px;
+        border-radius: 100%;
+    }
+
+    #elts_recent_post,
+    .elts_posts {
+        font-size: 12px;
+        flex-direction: column;
+    }
+
+    /* HOME INTRO */
+    #intro {
+        width: 60%;
+    }
+
+    #intro h1 {
+        font-size: 25px;
+    }
+
+    #square {
+        width: 90%;
+        margin-top: 10%;
+        font-size: 14px;
+        box-shadow: -3px -3px #EDF1F4;
+    }
+
+    /* BANNER PAGES */
+    #banner2 {
+        height: 140px;
+    }
+
+    #banner2 img {
+        margin-top: 2%;
+    }
+
+    /******** BACKEND ********/
+
+    /* TEMPLATE */
+    #div_dashboard {
+        margin-top: 12%;
+    }
+
+    #admin_div_user .second_nav_hover {
+        margin-left: -18%;
+    }
+
+    #admin_div_user {
+        padding-top: 8px;
+    }
+
+    #tag {
+        padding-top: 10px;
+    }
+
+    /* TABLES */
+    th,
+    td {
+        font-size: 10px;
+    }
+
+    /* FORMS */
+    #form_create {
+        width: 90%;
+    }
+
+    #form_create label {
+        font-size: 16px;
+    }
+
+    .date_input,
+    .time_input {
+        width: 50% !important;
+    }
+
+    #form {
+        width: 55%;
+    }
+
+    /* PROFIL */
+    #logo_profil {
+        margin-top: 10%;
     }
 }

@@ -23,7 +23,7 @@ require('banner.php');
         <p>
             <a href="index.php">Accueil</a>
             <span class="red"><i class=" fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span>
-            <a href="index.php?action=listPosts">Les chapitres</a></span>
+            <a href="index.php?action=listPosts">Les chapitres</a>
             <span class="red"><i class=" fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span>
             <?= htmlspecialchars($post['title_chapter']) ?>
         </p>
@@ -35,7 +35,8 @@ require('banner.php');
             <h1><?= mb_strtoupper(htmlspecialchars($post['title_chapter'])) ?>
             </h1>
             <div><img class="img_content"
-                    src="public/img/<?= htmlspecialchars($post['image_chapter']) ?>"" alt="
+                    src="public/img/<?= htmlspecialchars($post['image_chapter']) ?>"
+                    alt="
                     Billet simple pour l'Alaska - Jean Forteroche" />
                 <?=
                 nl2br(htmlspecialchars_decode($post['text_chapter']));
@@ -136,10 +137,10 @@ require('banner.php');
                     class="far fa-trash-alt"></i></span>
         </a>
     </div>
-</div>
-<?php
+    <?php
     }
-?>
+    ?>
+</div>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php');

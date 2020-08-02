@@ -31,7 +31,7 @@
     <!-- Header -->
     <header>
         <div id="header">
-            <div id="div_pages">
+            <div id="admin_div_pages">
                 <nav>
                     <ul>
                         <li><a href="index.php"><img id="tag" src="public/img/tag.png"
@@ -39,7 +39,7 @@
                     </ul>
                 </nav>
             </div>
-            <div id="div_user">
+            <div id="admin_div_user">
                 <nav>
                     <ul class="second_nav_hover">
                         <li><?php echo '<img class="avatar_dashboard" src="public/img/' . $this->user['avatar_user'] .'"/>'?>
@@ -84,7 +84,7 @@
     <p id="arrow"><a href="#"><i class="fas fa-arrow-up"></i></a></p>
     <!-- FOOTER -->
     <footer>
-        <p><a href="index.php?action=mentions">MENTIONS LÉGALES</a></p>
+        <p><a href="index.php?action=legalsMentions">MENTIONS LÉGALES</a></p>
         <p> © COPYRIGHT 2020 - CLARA MORVAN</p>
         <p><a href="index.php?action=privacyPolicy">POLITIQUE DE CONFIDENTIALITÉ</a></p>
     </footer>

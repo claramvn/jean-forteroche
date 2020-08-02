@@ -24,7 +24,15 @@
                         <?php
                         if ($this->isLogged()) {
                             echo '<span class="connected">BONJOUR' . ' <span class="red2">' . mb_strtoupper($this->user['pseudo_user']) . '</span> ! </span>' ?>
+                        <?php
+                        if ($this->isLogged()) { ?>
+                        <span class="mobile_connected"><i class="fas fa-user"></i></span>
+                        <?php
+                        } else {
+                            ?>
                         <i class="fas fa-user"></i>
+                        <?php
+                        } ?>
                         <ul class="second_ul">
                             <?php if ($this->isAdmin()) { ?>
                             <li class="first_li"><a href="index.php?action=adminReportedComments">TABLEAU DE BORD</a>

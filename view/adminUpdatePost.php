@@ -7,10 +7,12 @@ $title = 'Jean Forteroche - Modifier un chapitre';
 <?php ob_start(); ?>
 
 
-<div class="content">
+<div class="back_content">
 
     <!--Créer un  chapitre -->
-    <h1>Modifier un chapitre</h1>
+    <div class="intro_dash">
+        <h1>Modifier un chapitre</h1>
+    </div>
 
 
     <form id="form_create"

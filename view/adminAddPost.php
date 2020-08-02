@@ -6,10 +6,12 @@ $title = 'Jean Forteroche - Créer un chapitre';
 <!-- Content -->
 <?php ob_start(); ?>
 
-<div class="content">
+<div class="back_content">
 
     <!--Créer un  chapitre -->
-    <h1>Créer un chapitre</h1><br />
+    <div class="intro_dash">
+        <h1>Créer un chapitre</h1><br />
+    </div>
 
     <!-- Formulaire -->
     <form id="form_create" action="index.php?action=adminAddPost" method="post" enctype="multipart/form-data">
