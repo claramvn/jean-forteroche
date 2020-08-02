@@ -271,11 +271,11 @@ class UserController extends AncestorController
                 if (!$errors) {
                     $fileUpload = $this->uploadFile($file, $newName);
 
-                    $oldAvatar = $this->user['avatar_user'];
-                    $avatar = $newName;
-                    if ($oldAvatar === "thumbnail.jgp") {
-                        unlink('public/img/' . $oldAvatar);
+                    if ($this->user['avatar_user'] !== "thumbnail.jpg") {
+                        unlink('public/img/' . $this->user['avatar_user']);
                     }
+
+                    $avatar = $newName;
 
                     $success['img_profil'] = "- L'image a bien été modifiée";
                 } else {
@@ -311,9 +311,8 @@ class UserController extends AncestorController
 
         $id = $this->user['id_user'];
 
-        if ($this->user['avatar_user'] !== "thumbnail.jgp") {
-            $img = $this->user['avatar_user'];
-            unlink('public/img/' . $img);
+        if ($this->user['avatar_user'] !== "thumbnail.jpg") {
+            unlink('public/img/' . $this->user['avatar_user']);
         }
 
         $deleteUser = $userManager->deleteUser($id);
