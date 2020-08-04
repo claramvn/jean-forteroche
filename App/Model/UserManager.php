@@ -12,6 +12,7 @@ class UserManager extends Manager
         $req = $db->prepare('SELECT * FROM users WHERE pseudo_user = ?');
         $req->execute(array($name));
         $user = $req->fetch();
+        $req->closeCursor();
         return $user;
     }
 
@@ -22,6 +23,7 @@ class UserManager extends Manager
         $req = $db->prepare('SELECT email_user FROM users WHERE email_user = ?');
         $req->execute(array($email));
         $emailExist = $req->fetch();
+        $req->closeCursor();
         return $emailExist;
     }
 
@@ -51,6 +53,7 @@ class UserManager extends Manager
         $req = $db->prepare('SELECT * FROM users WHERE id_user = ?');
         $req->execute(array($id));
         $user = $req->fetch();
+        $req->closeCursor();
         return $user;
     }
 

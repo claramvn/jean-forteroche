@@ -13,6 +13,7 @@ class PostManager extends Manager
         $db = $this->dbConnect();
         $req = $db->query("SELECT * FROM chapters ORDER BY date_chapter DESC LIMIT 0,1 ");
         $recentPost = $req->fetch();
+        $req->closeCursor();
         return  $recentPost;
     }
 
@@ -23,6 +24,7 @@ class PostManager extends Manager
         $req = $db->query("SELECT * FROM chapters ORDER BY date_chapter DESC");
         $req->execute(array());
         $posts = $req->fetchAll();
+        $req->closeCursor();
         return $posts;
     }
 
@@ -33,6 +35,7 @@ class PostManager extends Manager
         $req = $db->prepare("SELECT * FROM chapters WHERE id_chapter = ?");
         $req->execute(array($postId));
         $post = $req->fetch();
+        $req->closeCursor();
         return  $post;
     }
 
