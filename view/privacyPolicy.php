@@ -4,11 +4,6 @@
 <!-- Content -->
 <?php ob_start(); ?>
 
-<!-- header -->
-<?php
-require('header.php');
-?>
-
 <!-- Bannière -->
 <?php
 require('banner.php');

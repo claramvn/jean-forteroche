@@ -6,10 +6,6 @@ $title = 'Jean Forteroche - Profil';
 <!-- Content -->
 <?php ob_start(); ?>
 
-<!-- Header -->
-<?php
-require('header.php');
-?>
 
 <div class="content">
 

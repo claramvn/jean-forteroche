@@ -11,11 +11,6 @@ $admin_li2 = 'inscription_li2';
 <!-- Content -->
 <?php ob_start(); ?>
 
-<!-- header -->
-<?php
-require('auth_header.php');
-?>
-
 <!-- Block Formulaire -->
 <div id="form">
 
@@ -48,4 +43,4 @@ require('auth_header.php');
 <div class="auth_space"></div>
 
 <?php $content = ob_get_clean(); ?>
-<?php require('view/template.php');
+<?php require('view/authTemplate.php');

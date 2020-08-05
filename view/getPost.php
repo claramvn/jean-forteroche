@@ -6,11 +6,6 @@ $title = 'Jean Forteroche - ' . htmlspecialchars($post['title_chapter']);
 <!-- Content -->
 <?php ob_start(); ?>
 
-<!-- header -->
-<?php
-require('header.php');
-?>
-
 <!-- Bannière -->
 <?php
 require('banner.php');
@@ -124,6 +119,13 @@ require('banner.php');
                 <input class="button_design" type="submit" name="button_comment" value="PUBLIER" />
             </form>
         </div>
+    </div>
+    <?php
+    } else {
+        ?>
+    <div id="block_formComment2">
+        <p id="para_addComment"><i class="far fa-comment-alt"></i> AJOUTER UN COMMENTAIRE</p>
+        <p id="log">Vous devez être connecté pour publier un commentaire.</p>
     </div>
     <?php
     }

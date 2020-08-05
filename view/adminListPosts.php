@@ -51,7 +51,7 @@ $title = 'Jean Forteroche - Les chapitres';
             <th>TITRE</th>
             <th>IMAGE</th>
             <th>DATE</th>
-            <th>VOIR & MODERER LES COMMENTAIRES</th>
+            <th>VOIR ET MODÉRER LES COMMENTAIRES</th>
             <th>MODIFIER</th>
             <th>SUPPRIMER</th>
         </tr>

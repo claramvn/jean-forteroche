@@ -47,7 +47,7 @@ $title = 'Jean Forteroche - Tableau de bord';
             <th>PSEUDO</th>
             <th>DATE</th>
             <th>COMMENTAIRE</th>
-            <th>AFFICHER</th>
+            <th>VOIR/MODÉRER</th>
             <th>VALIDER</th>
             <th>SUPPRIMER</th>
         </tr>

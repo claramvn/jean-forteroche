@@ -6,11 +6,6 @@ $title = 'Jean Forteroche - Accueil';
 <!-- Content -->
 <?php ob_start(); ?>
 
-<!-- header -->
-<?php
-require('header.php');
-?>
-
 <!-- Bannière -->
 <div id="banner">
     <div id="text_banner">

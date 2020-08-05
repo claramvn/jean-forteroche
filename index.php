@@ -13,7 +13,7 @@ use \App\Controller\UserController;
 try {
     if (isset($_GET['action'])) {
         $action = trim(htmlspecialchars($_GET['action']));
-        switch ($_GET['action']) {
+        switch ($action) {
 
             /*********************************************************************************
             ************************************ FrontController *****************************

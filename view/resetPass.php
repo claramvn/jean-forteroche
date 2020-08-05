@@ -10,11 +10,6 @@ $admin_li2 = 'connexion_li2';
 <!-- Content -->
 <?php ob_start(); ?>
 
-<!-- header -->
-<?php
-require('auth_header.php');
-?>
-
 <!-- Formulaire -->
 <div id="form">
     <h1>Réinitialiser votre mot de passe</h1>
@@ -50,4 +45,4 @@ require('auth_header.php');
 
 
 <?php $content = ob_get_clean(); ?>
-<?php require('view/template.php');
+<?php require('view/authTemplate.php');
