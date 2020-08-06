@@ -1,7 +1,5 @@
 <?php
 session_start();
-// Affichage des erreurs
-ini_set('error_reporting', E_ALL);
 
 require_once('vendor/autoload.php');
 
@@ -182,5 +180,5 @@ try {
         $frontController->home();
     }
 } catch (Exception $e) {
-    "Erreur" . $e->getMessage();
+    require_once('view/error404.php');
 }
