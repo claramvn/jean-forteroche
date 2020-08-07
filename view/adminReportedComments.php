@@ -47,7 +47,6 @@ $title = 'Jean Forteroche - Tableau de bord';
             <th>PSEUDO</th>
             <th>DATE</th>
             <th>COMMENTAIRE</th>
-            <th>VOIR/MODÉRER</th>
             <th>VALIDER</th>
             <th>SUPPRIMER</th>
         </tr>
@@ -69,9 +68,6 @@ $title = 'Jean Forteroche - Tableau de bord';
             echo $date; ?>
             </td>
             <td> <?php echo '<i class="fas fa-angle-double-left"></i>  ' . htmlspecialchars($dataComments['content_comment']) . '  <i class="fas fa-angle-double-right"></i>' ?>
-            </td>
-            <td> <a href="index.php?action=getPost&amp;id=<?= htmlspecialchars($dataComments['id_chapter']) ?>"
-                    title="AFFICHER"><span class="bell"><i class="far fa-eye"></i></span></a>
             </td>
             <td><a href="index.php?action=undoReportedComment&amp;id=<?= htmlspecialchars($dataComments['id_comment']) ?>"
                     title="VALIDER"><span class="bell_ok"><i class="fas fa-check-square"></i></span></a>

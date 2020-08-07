@@ -11,7 +11,7 @@ class Manager
             $db = new \PDO('mysql:host=localhost;dbname=alaska;charset=utf8', 'root', '');
             return $db;
         } catch (Exception $e) {
-            "Erreur". $e->getMessage();
+            require_once('view/error404.php');
         }
     }
 }
