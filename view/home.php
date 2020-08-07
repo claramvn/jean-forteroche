@@ -10,7 +10,7 @@ $title = 'Jean Forteroche - Accueil';
 <div id="banner">
     <div id="text_banner">
         <h1>BILLET SIMPLE POUR L'ALASKA</h1>
-        <h2>DÉCOUVREZ LE ROMAN EN LIGNE</h2>
+        <h2>DÉCOUVRIR LE ROMAN EN LIGNE</h2>
         <p><a href="#recent_tag"><i class="fas fa-chevron-circle-down"></i></a></p>
     </div>
     <img src="public/img/banner.png" alt="Bannière montagnes Alaska - Jean Forteroche" />
@@ -21,7 +21,7 @@ $title = 'Jean Forteroche - Accueil';
     <!-- Article récent -->
     <div>
         <div id="recent_tag">
-            À la une
+            Dernier chapitre
         </div>
         <div id="triangle"></div>
     </div>
@@ -66,9 +66,17 @@ $title = 'Jean Forteroche - Accueil';
         unset($_SESSION['error_recentPost']);
     ?>
 
+    <div id="home_link_chapters">
+        <h1><i class="fas fa-book-open"></i><br /><br />
+            TOUS LES CHAPITRES</h1><br />
+        <p><a href="index.php?action=listPosts">C'EST PAR ICI <i class=" fas
+                    fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span></a></p>
+    </div>
+
     <div id="intro">
         <div class="separation"></div>
         <h1> Billet simple pour l'Alaska </h1>
+        <p id="intro_question">Envie d'embarquer pour une aventure des plus Alaskabrantesque ? Découvrez le résumé :</p>
         <div class="separation"></div>
         <div id="square">
             <p>
