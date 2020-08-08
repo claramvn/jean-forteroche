@@ -70,7 +70,7 @@ $title = 'Jean Forteroche - Accueil';
         <h1><i class="fas fa-book-open"></i><br /><br />
             TOUS LES CHAPITRES</h1><br />
         <p><a href="index.php?action=listPosts">C'EST PAR ICI <i class=" fas
-                    fa-chevron-right"></i><i class="fas fa-chevron-right"></i></span></a></p>
+                    fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a></p>
     </div>
 
     <div id="intro">
