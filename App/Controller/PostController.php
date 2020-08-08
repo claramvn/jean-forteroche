@@ -230,9 +230,8 @@ class PostController extends AncestorController
         $postId = intval($this->cleanParam($_GET['id']));
 
         $post = $postManager->getPost($postId);
-        $img = $post['image_chapter'];
-        unlink('public/img/' . $img);
-
+        unlink('public/img/' . $post['image_chapter']);
+        
         $deletePost = $postManager->deletePost($postId);
 
         if ($deletePost === false || !isset($postId) || $postId < 0) {
