@@ -9,14 +9,13 @@ $title = 'Jean Forteroche - Profil';
 
 <div class="content">
 
-    <div id="logo_profil">
-        <a href="index.php"><img
-                src="public/img/<?= $this->user['avatar_user'] ?>"
-                alt="Logo Jean Forteroche" /></a>
-    </div>
-
     <!-- Formulaire -->
     <div id="form">
+        <div id="logo_profil">
+            <img src="public/img/<?= $avatar ?>"
+                alt="Logo Jean Forteroche" />
+        </div>
+
         <h1> Profil </h1>
         <p>Modifier les informations relatives à votre profil.</p><br /><br />
 
