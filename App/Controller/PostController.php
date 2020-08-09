@@ -192,6 +192,7 @@ class PostController extends AncestorController
                 }
     
                 if (!$errors) {
+                    unlink('public/img/' . $post['image_chapter']);
                     $fileUpload = $this->uploadFile($file, $newName);
                     $image = $newName;
                     $success['img_post'] = "- L'image a bien été modifiée";
